@@ -1,0 +1,345 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.2vh;
+}
+article {
+    display: grid;
+    grid-template:
+    'header header header'
+    'personal biography biography'
+    'personal timeline timeline'
+    'personal skills skills'
+    'personal hobby hobby'
+    / 1fr 2fr 2fr;
+}
+#header {
+    grid-area: header;
+    display: grid;
+    place-items: center center;
+    height: 21.7vh;
+    border-bottom: 0.1vh solid black;
+    background-image: url('../images/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#header-text {
+    color: rgb(67, 194, 77);
+    background-color: rgba(50, 50, 50, 0.96);
+    width: 100vh;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    text-align: center;
+    letter-spacing: 0.5vh;
+    text-shadow: 0.2vh 0.2vh 0.1vh black;
+    box-shadow: inset 0 0 0.6vh rgba(0, 0, 0, 0.5); 
+}
+#header-text p:first-child {
+    font-size: 3.5vh;
+}
+#header-text p:nth-child(2) {
+    font-size: 3.2vh;
+}
+#personal {
+    grid-area: personal;
+    padding-top: 14.5vh;
+    border-right: 0.1vh dashed rgb(45, 134, 1);
+}
+#container-photo {
+    display: grid;
+    place-items: center center;
+    width: 30vh;
+    height: 30vh;
+    border: 0.1vh dashed rgb(45, 134, 1);
+    margin-top: -30vh;
+    margin-left: 5vh; 
+}
+#personal-photo {
+    width: 25.5vh;
+    height: 25.5vh;
+    border: 0.1vh solid rgb(45, 134, 1);
+    border-radius: 100%;
+    background-image: url('../images/my-photo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section-heading {
+    margin-left: 5vh;
+    font-size: 2.5vh;
+    text-shadow: 0.1vh 0.1vh 0.1vh rgb(45, 134, 1);
+}
+#personal ul li {
+    line-height: 3.5vh;
+}
+#links {
+    display: grid;
+    grid-row-gap: 2vh;
+    width: 100%;
+    border-top: 0.1vh dashed rgb(45, 134, 1);
+}
+#links span {
+    color: rgb(67, 194, 77);
+    background-color: rgb(50, 50, 50);
+    width: 85%;
+    padding-left: 2vh;
+    margin-left: 2vh;
+    font-family: 'Zen Dots', cursive;
+    font-size: 2.2vh;
+    letter-spacing: 0.5vh;
+    text-shadow: 0.2vh 0.2vh 0.1vh black;
+    box-shadow: inset 0 0 0.6vh rgba(0, 0, 0, 0.5), 0.3vh 0.3vh 0.1vh 0.1vh rgb(45, 134, 1); 
+}
+#links span:hover {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: rgb(67, 194, 77);
+    text-shadow: none;
+    box-shadow: inset 0 0 0.6vh rgba(0, 0, 0, 0.5), 0.3vh 0.3vh 0.1vh 0.1vh rgb(50, 50, 50);
+}
+#links span a:link, #links span a:visited {
+    color: rgb(67, 194, 77);
+    text-decoration: none;  
+}
+#links span a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;  
+}
+#links span p {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+#biography {
+    grid-area: biography;
+    padding-right: 5vh;
+    padding-left: 5vh;
+    border-bottom: 0.1vh dashed rgb(45, 134, 1);
+}
+a:link {
+    color: rgb(45, 134, 1);
+}
+a:visited {
+    color: rgb(83, 83, 83);
+}
+#timeline {
+    grid-area: timeline;
+    display: grid;
+    grid-auto-flow: column;
+    padding-right: 5vh;
+    padding-left: 5vh;
+    border-bottom: 0.1vh dashed rgb(45, 134, 1);
+}
+#svg-timeline {
+    grid-row: 2/3;
+    width: 65vh;
+    height: 50vh;
+    background-image: url('../images/timeline.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#document-number {
+    grid-row: 1/2;
+    font-size: 2.5vh;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.5vh;
+}
+#documents {
+    grid-row: 2/3;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center center;
+    width: 85vh;
+    height: 44.75vh;
+    padding-left: 3vh;
+}
+#left-button {
+    width: 7vh;
+    height: 7vh;
+    background-image: url('../images/arrow.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#left-button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+#right-button {
+    width: 7vh;
+    height: 7vh;
+    background-image: url('../images/arrow.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform:rotate(180deg);
+}
+#right-button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+#document-image {
+    width: 63.5vh;
+    height: 44.75vh;
+    border: 0.1vh solid rgb(0, 0, 0);
+    border-radius: 2vh;
+    background-image: url('../images/courses/sololearn-js.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0.5vh 0.5vh 0.8vh 0.15vh black;
+}
+#document-image:hover {
+    cursor: pointer;
+}
+#document-image:active {
+    transform: scale(1.5);
+    z-index: 1;
+    margin-right: 8vh;
+}
+#skills {
+    grid-area: skills;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-gap: 3vh;
+    place-items: center start;
+    padding-right: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 5vh;
+    border-bottom: 0.1vh dashed rgb(45, 134, 1);
+}
+#skills p {
+    grid-column: 1/10;
+    place-self: start start;
+}
+#skill-icon-1, #skill-icon-2, #skill-icon-3, #skill-icon-4, #skill-icon-5, #skill-icon-6, #skill-icon-7 {
+    width: 6vh;
+    height: 6vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#skill-icon-1 {
+    background-image: url('../images/skills/html.png');
+}
+#skill-icon-2 {
+    background-image: url('../images/skills/css.png');
+}
+#skill-icon-3 {
+    background-image: url('../images/skills/js.png');
+}
+#skill-icon-4 {
+    background-image: url('../images/skills/git.png');
+}
+#skill-icon-5 {
+    background-image: url('../images/skills/sass.png');
+}
+#skill-icon-6 {
+    background-image: url('../images/skills/photoshop.png');
+}
+#skill-icon-7 {
+    background-image: url('../images/skills/office.png');
+}
+#skills span {
+    place-self: center start;
+    font-weight: 900;
+}
+.progress-container {
+    background-color: rgb(50, 50, 50);
+    width: 28vh;
+    height: 2vh;
+    border: 0.1vh solid black;
+    border-radius: 1vh;
+    box-shadow: inset 0 0 0.7vh rgba(0, 0, 0, 0.5); 
+}
+.progress-bar {
+    background-color: rgb(45, 134, 1);
+    height: 1.8vh;
+    border: 0.1vh solid black;
+    border-radius: 1vh;
+    box-shadow: inset 0 0 0.7vh rgba(0, 0, 0, 0.5); 
+}
+#bar-1 {
+    width: 85%;
+}
+#bar-2 {
+    width: 85%;
+}
+#bar-3 {
+    width: 70%;
+}
+#bar-4 {
+    width: 70%;
+}
+#bar-5 {
+    width: 50%;
+}
+#bar-6 {
+    width: 35%;
+}
+#bar-7 {
+    width: 70%;
+}
+#hobby {
+    grid-area: hobby;
+    display: grid;
+    grid-row-gap: 3vh;
+    grid-auto-flow: column;
+    padding-bottom: 5vh;
+    padding-left: 5vh;
+}
+#hobby p {
+    grid-column: 1/9;
+}
+#hobby-icon-1, #hobby-icon-2, #hobby-icon-3, #hobby-icon-4, #hobby-icon-5, #hobby-icon-6, #hobby-icon-7, #hobby-icon-8, #hobby-icon-9, #hobby-icon-10  {
+    grid-row: 2/3;
+    width: 7vh;
+    height: 7vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#hobby-icon-1 {
+    background-image: url('../images/hobby/healthy.png');
+}
+#hobby-icon-2 {
+    background-image: url('../images/hobby/sport.png');
+}
+#hobby-icon-3 {
+    background-image: url('../images/hobby/gym.png');
+}
+#hobby-icon-4 {
+    background-image: url('../images/hobby/travel.png');
+}
+#hobby-icon-5 {
+    background-image: url('../images/hobby/chess.png');
+}
+#hobby-icon-6 {
+    background-image: url('../images/hobby/reading.png');
+}
+#hobby-icon-7 {
+    background-image: url('../images/hobby/listening.png');
+}
+#hobby-icon-8 {
+    background-image: url('../images/hobby/game.png');
+}
+#hobby-icon-9 {
+    background-image: url('../images/hobby/movies.png');
+}
+/* Полоса прокрутки окна просмотра браузера: */
+::-webkit-scrollbar {
+    cursor: pointer;
+    width: 0.8vmax;
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(50, 50, 50);
+    box-shadow: inset 0 0 0.7vh rgba(0, 0, 0, 0.5);    
+}
+::-webkit-scrollbar-track:active {
+    background-color: rgb(45, 134, 1);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(45, 134, 1);
+    border: 0.1vh solid black;
+    border-radius: 1vh;
+    box-shadow: inset 0 0 0.7vh rgba(0, 0, 0, 0.5); 
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: rgb(50, 50, 50);
+}

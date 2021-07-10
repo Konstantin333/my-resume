@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>CSS Grid Layout</title>
+        <link href='./images/my-photo.png' rel='icon' type='x-icon/image'>
+        <link href='./images/my-photo.png' rel='shortcut-icon' type='x-icon/image'>
+        <link href='./styles/css-grid.css' rel='stylesheet' type='text/css'>
+        <!-- Шрифт Roboto: -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- Шрифт Zen Dots: -->
+        <link rel='preconnect' href='https://fonts.gstatic.com'>
+        <link href='https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap' rel='stylesheet'>
+    </head>
+    <body>
+        <header id='page-title'>
+            <b>CSS Grid Layout</b>
+        </header>
+        <nav id ='item-navigation'>
+            <h1>НАВИГАЦИЯ<br>ПО СВОЙСТВАМ:</h1>
+            <div id='disable-selection'>
+                <input type='button' value='отменить выделение'></div>
+            </div>
+            <p class='element-sections'><u>Создание grid-контейнера:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='display: grid; & grid-auto-flow'>
+            <p class='element-sections'><u>Определение количества колонок и строк в сетке:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='grid-template-columns(rows)'>
+            <p class='element-sections'><u>Создание разрыва между элементами в сетке:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='grid-gap'>
+            <p class='element-sections'><u>Создание шаблона. Определение начала и конца элементов:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='grid-template & grid-column(row)'>
+            <p class='element-sections'><u>Выравнивание элементов в сетке:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='place-content'>
+            <p class='element-sections'><u>Выравнивание внутри ячеек сетки:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='place-items & place-self'>
+            <p class='element-sections'><u>Перестановка и наложение элементов:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='order & z-index'>
+        </nav>
+        <article>
+            <section>
+                <span class='section-heading'>
+                    <b>1.<br>Создание grid-контейнера</b>
+                </span>
+                <div class='content-sections'>
+                    <div id='container-1-1' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: block<br>(по умолчанию);</b>
+                    </span>
+                    <div id='container-1-2' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;</b>
+                    </span>
+                    <div id='container-1-3' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-auto-flow: column;</b>
+                    </span>
+                </div>
+            </section>
+            <section>
+                <span class='section-heading'>
+                    <b>2.<br>Определение количества колонок и строк в сетке</b>
+                </span>
+                <div class='content-sections'>
+                    <div id='container-2-1' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template-columns: repeat(9, 1fr);</b>
+                    </span>
+                    <div id='container-2-2' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template-columns: repeat(5, 1fr);</b>
+                    </span>
+                    <div id='container-2-3' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template-columns: 1fr 4fr 2fr 1fr;<br></b>
+                    </span>
+                    <div id='container-2-4' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template-rows: repeat(9, 1fr);<br>3). grid-auto-flow: column;</b>
+                    </span>
+                    <div id='container-2-5' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template-rows: repeat(5, 1fr);<br>3). grid-auto-flow: column;</b>
+                    </span>
+                    <div id='container-2-6' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template-rows: 1fr 4fr 2fr 1fr;<br>3). grid-auto-flow: column;</b>
+                    </span>
+                </div>
+            </section>
+            <section>
+                <span class='section-heading'>
+                    <b>3.<br>Создание разрыва между элементами в сетке</b>
+                </span>
+                <div class='content-sections'>
+                    <div id='container-3-1' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template-columns: repeat(3, 1fr);<br>3). grid-template-rows: repeat(6, 1fr);<br>4). grid-column-gap: 1vmin;</b>
+                    </span>
+                    <div id='container-3-2' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template-columns: repeat(6, 1fr);<br>3). grid-template-rows: repeat(3, 1fr);<br>4). grid-row-gap: 2vmin;</b>
+                    </span>
+                    <div id='container-3-3' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template-columns: repeat(6, 1fr);<br>3). grid-template-rows: repeat(3, 1fr);<br>4). grid-gap: 2vmin;</b>
+                    </span>
+                </div>
+            </section>
+            <section>
+                <span class='section-heading'>
+                    <b> 4.<br>Создание шаблона. Определение начала и конца элементов</b>
+                </span>
+                <div class='content-sections'>
+                    <div id='container-4-1' class='containers'>
+                        <div id='box-1'>header</div>
+                        <div id='box-2'>nav</div>
+                        <div id='box-3'>article</div>
+                        <div id='box-4'>aside</div>
+                        <div id='box-5'>footer</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template:<br>'header header header' 2fr<br>'nav article aside' 5fr<br>
+                        'footer footer footer' 1fr<br>/ 1fr 4fr 2fr;<br><br>#container div:first-child { grid-area: header; }<br>/* и т.д. */</b>
+                    </span>
+                    <div id='container-4-2' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br><br>#container div:nth-child(2) { grid-row: 1/3; }<br><br>
+                        #container div:nth-child(3) { grid-column: 2/4; }</b>
+                    </span>
+                    <div id='container-4-3' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br><br>#container div:first-child { grid-column: 1/4;<br>grid-row: 2/5; }</b>
+                    </span>
+                </div>
+            </section>
+           <section>
+                <span class='section-heading'>
+                    <b>5.<br>Выравнивание элементов в сетке</b>
+                </span>
+                <div class='content-sections'>
+                    <div id='container-5-1' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). align-content: start;<br></b>
+                    </span>
+                    <div id='container-5-2' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). align-content: center;<br></b>
+                    </span>
+                    <div id='container-5-3' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). align-content: end;<br></b>
+                    </span>
+                    <div id='container-5-4' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). justify-content: start;<br></b>
+                    </span>
+                    <div id='container-5-5' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). justify-content: center;<br></b>
+                    </span>
+                    <div id='container-5-6' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). justify-content: end;<br></b>
+                    </span>
+                    <div id='container-5-7' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). place-content: start end;<br></b>
+                    </span>
+                    <div id='container-5-8' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). place-content: center center;<br></b>
+                    </span>
+                    <div id='container-5-9' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). place-content: end start;<br></b>
+                    </span>
+                </div>
+            </section>
+            <section>
+                <span class='section-heading'>
+                    <b>6.<br>Выравнивание внутри ячеек сетки</b>
+                </span>
+                <div class='content-sections'>
+                    <div id='container-6-1' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template-columns: repeat(3, 1fr);<br>3). align-items: center;<br><br>
+                        #container div:first-child { align-self: start; }<br><br>
+                        #container div:last-child { align-self: end; }</b>
+                    </span>
+                    <div id='container-6-2' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template-columns: repeat(3, 1fr);<br>3). justify-items: center;<br><br>
+                        #container div:nth-child(2) { justify-self: start; }<br><br>
+                        #container div:last-child { justify-self: end; }</b>
+                    </span>
+                    <div id='container-6-3' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>1). display: grid;<br>2). grid-template-columns: repeat(3, 1fr);<br>3). place-items: center center;<br><br>
+                        #container div:nth-child(2) { place-self: start start; }<br><br>
+                        #container div:last-child { place-self: end end; }</b>
+                    </span>
+                </div>
+            </section>
+            <section>
+                <span class='section-heading'>
+                    <b>7.<br>Перестановка и наложение элементов</b>
+                </span>
+                <div class='content-sections'>
+                    <div id='container-7-1' class='containers'>
+                        <div id='box-1'>1</div>
+                        <div id='box-2'>2</div>
+                        <div id='box-3'>3</div>
+                        <div id='box-4'>4</div>
+                        <div id='box-5'>5</div>
+                        <div id='box-6'>6</div>
+                        <div id='box-7'>7</div>
+                        <div id='box-8'>8</div>
+                        <div id='box-9'>9</div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>.....<br><br>#container div:nth-child(7) { order: 1; }<br><br>#container div:nth-child(8) { order: 2; }<br><br>
+                            #container div:nth-child(9) { order: 3; }<br>/* и т.д. */</b>
+                    </span>
+                    <div id='container-7-2' class='containers'>
+                        <div id='box-1'></div>
+                        <div id='box-2'></div>
+                        <div id='box-3'></div>
+                        <div id='box-4'></div>
+                        <div id='box-5'></div>
+                        <div id='box-1'></div>
+                        <div id='box-2'></div>
+                        <div id='box-3'></div>
+                        <div id='box-4'></div>
+                        <div id='box-5'></div>
+                    </div>
+                    <span class='descriptions'>
+                        <b>.....<br><br>#container div:nth-child(6) { z-index: 3; }<br><br>
+                            #container div:nth-child(8) { z-index: 2; }<br><br>#container div:nth-child(9) { z-index: 1; }<br><br></b>
+                    </span>
+                </div>
+            </section>
+        </article> 
+        <footer id='footer-page'>
+            <div id='footer-content'>
+                <a href='html-elements.html'>Элементы HTML</a>
+                <a href='css-elements.html'>Элементы CSS</a>
+                <a href='css-flexbox.html'>CSS Flexbox</a>
+                <a id='used-link' href='css-grid.html'>CSS Grid Layout</a>
+                <a href='js-methods.html'>Методы JS</a>
+                <a href='index.html'>РЕЗЮМЕ</a>
+                <p>
+                    <i>kpdan.95@gmail.com | +7 987 902-05-46</i><br>
+                    <b>CSS Grid Layout | 2021 © Konstantin Dan</b>
+                </p>
+            </div>   
+        </footer>
+        <div id='arrowTop' hidden></div>
+        <script src='./scripts/css-grid.js' type='text/javascript'></script>
+    </body>
+</html>

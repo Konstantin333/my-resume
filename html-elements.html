@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Элементы HTML</title>
+        <link href='./images/my-photo.png' rel='icon' type='x-icon/image'>
+        <link href='./images/my-photo.png' rel='shortcut-icon' type='x-icon/image'>
+        <link href='./styles/html-elements.css' rel='stylesheet' type='text/css'>
+        <!-- Шрифт Roboto: -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- Шрифт Zen Dots: -->
+        <link rel='preconnect' href='https://fonts.gstatic.com'>
+        <link href='https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap' rel='stylesheet'> 
+    </head>
+    <body>
+        <header id='page-title'>
+            <b>ЭЛЕМЕНТЫ HTML</b>
+        </header>
+        <nav id ='item-navigation'>
+            <h1>НАВИГАЦИЯ<br>ПО ТЕГАМ:</h1>
+            <div id='disable-selection'>
+                <input type='button' value='отменить выделение'></div>
+            </div>
+            <p class='element-sections'><u>элементы разметки текста:</u></p>
+            <input class='navigation-elements' type='button' value='без тега'>
+            <input class='navigation-elements' type='button' value='b'>
+            <input class='navigation-elements' type='button' value='i'>
+            <input class='navigation-elements' type='button' value='u'>
+            <input class='navigation-elements' type='button' value='s'>
+            <input class='navigation-elements' type='button' value='sup'>
+            <input class='navigation-elements' type='button' value='sub'>
+            <input class='navigation-elements' type='button' value='br'>
+            <input class='navigation-elements' type='button' value='hr'>
+            <input class='navigation-elements' type='button' value='ins'>
+            <input class='navigation-elements' type='button' value='del'>
+            <input class='navigation-elements' type='button' value='strong'>
+            <input class='navigation-elements' type='button' value='em'>
+            <input class='navigation-elements' type='button' value='mark'>
+            <input class='navigation-elements' type='button' value='q'>
+            <input class='navigation-elements' type='button' value='pre'>
+            <input class='navigation-elements' type='button' value='code'>
+            <input class='navigation-elements' type='button' value='big'>
+            <input class='navigation-elements' type='button' value='small'>
+            <input class='navigation-elements' type='button' value='h1-h6'>
+            <input class='navigation-elements' type='button' value='p'>
+            <input class='navigation-elements' type='button' value='ul'>
+            <input class='navigation-elements' type='button' value='ol'>
+            <input class='navigation-elements' type='button' value='dl'>
+            <input class='navigation-elements' type='button' value='abbr'>
+            <input class='navigation-elements' type='button' value='form'>
+            <input class='navigation-elements' type='button' value='details'>
+            <p class='element-sections'><u>элементы мультимедиа:</u></p>
+            <input class='navigation-elements' type='button' value='a'>
+            <input class='navigation-elements' type='button' value='img'>
+            <input class='navigation-elements' type='button' value='audio'>
+            <input class='navigation-elements' type='button' value='video'>
+            <input class='navigation-elements' type='button' value='progress'>
+            <p class='element-sections'><u>элементы группировки/<br>семантические элементы:</u></p>
+            <input class='navigation-elements' type='button' value='div'>
+            <input class='navigation-elements' type='button' value='span'>
+            <input class='navigation-elements' type='button' value='main'>
+            <input class='navigation-elements' type='button' value='header'>
+            <input class='navigation-elements' type='button' value='nav'>
+            <input class='navigation-elements' type='button' value='article'>
+            <input class='navigation-elements' type='button' value='section'>
+            <input class='navigation-elements' type='button' value='aside'>
+            <input class='navigation-elements' type='button' value='footer'>
+            <input class='navigation-elements' type='button' value='hgroup'>
+            <input class='navigation-elements' type='button' value='address'>
+            <input class='navigation-elements' type='button' value='time'>
+            <input class='navigation-elements' type='button' value='figure'>
+        </nav>
+        <table id='elements-table'>
+            <tr>
+                <td>№ п/п</td>
+                <td>ТЕГ</td>
+                <td>РЕЗУЛЬТАТ</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>без тега</td>
+                <td>обычный текст</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>b</td>
+                <td><b>жирный текст</b></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>i</td>
+                <td><i>курсивный текст</i></td>
+            </tr> 
+            <tr>
+                <td>4</td>
+                <td>u</td>
+                <td><u>подчёркнутый текст</u></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>s</td>
+                <td><s>перечёркнутый текст</s></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>sup</td>
+                <td><sup>надстрочный текст</sup></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>sub</td>
+                <td><sub>подстрочный текст</sub></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>br</td>
+                <td>создаёт<br>разрыв строки</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>hr</td>
+                <td>создаёт разрыв строки в виде горизонтальной линии:<hr></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>ins</td>
+                <td><ins>вставленный текст</ins></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>del</td>
+                <td><del>удалённый текст</del></td>
+            </tr>
+            
+            <tr>
+                <td>12</td>
+                <td>strong</td>
+                <td><strong>важная текстовая информация</strong></td>
+            </tr> 
+            <tr>
+                <td>13</td>
+                <td>em</td>
+                <td><em>акцентирование текста</em></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>mark</td>
+                <td><mark>помечает текст как выделенный</mark></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>q</td>
+                <td><q>выделение цитат внутри текста</q></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>pre</td>
+                <td><pre>переносит на веб-сайт все используемые      пробелы     в коде</pre></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>code</td>
+                <td><code>предназначен для отображения строк, представляющих собой программный код</code></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>big</td>
+                <td><big>текст крупным шрифтом</big></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>small</td>
+                <td><small>текст мелким шрифтом</small></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>h1-h6</td>
+                <td>
+                    <h1>h1 - Заголовок 1</h1>
+                    <h2>h2 - Заголовок 2</h2>
+                    <h3>h3 - Заголовок 3</h3>
+                    <h4>h4 - Заголовок 4</h4>
+                    <h5>h5 - Заголовок 5</h5>
+                    <h6>h6 - Заголовок 6</h6>
+                </td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>p</td>
+                <td><p>параграф</p></td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>ul</td>
+                <td>
+                    <ul> Ненумерованный список:
+                        <li>пункт списка №1</li>
+                        <li>пункт списка №2</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>ol</td>
+                <td>
+                    <ol type='a'> Нумерованный список:
+                        <li>пункт списка №1</li>
+                        <li>пункт списка №2</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>24</td>
+                <td>dl</td>
+                <td>
+                    <dl> Список с описанием:
+                        <dt>элемент списка</dt>
+                        <dd>описание</dd>
+                        <dt>элемент списка</dt>
+                        <dd>описание</dd>
+                    </dl>
+                </td>
+            </tr>
+            <tr>
+                <td>25</td>
+                <td>abbr</td>
+                <td><abbr title='Аббревиатура'>Аббр</abbr></td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>form<br>(button, textarea, input)</td>
+                <td>
+                    <p>1. button - <button >кнопка</button></p><br>
+                    <p>2. textarea - <textarea placeholder='поле для ввода объёмного текста'></textarea></p><br>
+                    <p>3.1. input type='text' <input type='text' placeholder='имя пользователя'/></p>
+                    <p>3.2. input type='password' <input type='password' placeholder='пароль'/></p>
+                    <p>3.3. input type='submit' <input type='submit' placeholder='отправить'/></p>
+                    <p>3.4. input type='search' <input type='search' placeholder='поиск'/></p>
+                    <p>3.5. input type='number' <input type='number' placeholder='число'/></p>
+                    <p>3.6. input type='range' <input type='range'/></p>
+                    <p>3.7. input type='color' <input type='color'/></p>
+                    <p>3.8. input type='tel' <input type='tel' placeholder='номер телефона'/></p>
+                    <p>3.9. input type='url' <input type='url' placeholder='url-адрес'/></p>
+                    <p>3.10. input type='email' <input type='email' placeholder='email'/></p>
+                    <p>3.11. input type='date' <input type='date'/></p>
+                    <p>3.12. input type='month' <input type='month'/></p>
+                    <p>3.13. input type='week' <input type='week'/></p>
+                    <p>3.14. input type='time' <input type='time'/></p>
+                    <p>3.15. input type='datetime' <input type='datetime' placeholder='ввод точной даты'/></p>
+                    <p>3.16. input type='datetime-local' <input type='datetime-local'/></p>
+                    <p>3.17. input type='radio'
+                        <input type='radio' id='1' name='contact'/>
+                        <label for='1'>1</label>
+                        <input type='radio' id='2' name='contact'/>
+                        <label for='2'>2</label>
+                    </p>
+                    <p>3.18. input type='checkbox'
+                        <input type='checkbox'/> 1
+                        <input type='checkbox'/> 2
+                    </p>
+                    <p>3.19. input type='button' <input type='button' value='кнопка'/></p>
+                    <p>3.20. input type='reset' <input type='reset'/></p>
+                    <p>3.21. input type='file' <input type='file'/></p>
+                    <p>3.22. input type='hidden' <input type='hidden'/></p>
+                    <p>3.23. input & datalist <input id='car' type='text' list='colors'/>
+                        <datalist id='colors'>
+                            <option value='красный'>
+                            <option value='зелёный'>
+                            <option value='жёлтый'>
+                        </datalist>
+                    </p>
+                    <p>и т.д.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>27</td>
+                <td>details</td>
+                <td>
+                    <details>Текст
+                        <summary>Показать/ Скрыть текст</summary> 
+                    </details>
+                </td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>a</td>
+                <td><a href='http://www.google.com'>Гипперссылка</a></td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>img</td>
+                <td>
+                    <img src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'>
+                </td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td>audio</td>
+                <td>
+                    <p><u>Ramin Djawadi - This World:</u></p>
+                    <audio controls>
+                        <source src='./other/Ramin Djawadi - This World (fragment).mp3' type='audio/mp3'></src>
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td>31</td>
+                <td>video</td>
+                <td><video src='./other/puppies.mp4' controls style='width: 60%;'></video>
+                </td>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td>progress</td>
+                <td><progress min='0' max='100' value='55'></progress></td>
+            </tr>
+            <tr>
+                <td>33</td>
+                <td>div</td>
+                <td><div style='width: 20vmin; height: 15vmin; border: 0.3vmin solid black; background-color: grey'>
+                    <div style='width: 10vmin; height: 4vmin; border: 0.1vmin solid black; background-color: white'>object1</div>
+                    <div style='width: 10vmin; height: 4vmin; margin-top: 0.5vmin; margin-bottom: 0.5vmin; border: 0.1vmin solid black; background-color: yellow'>object2</div>
+                    <div style='width: 10vmin; height: 4vmin; border: 0.1vmin solid black; background-color: lightblue'>object3</div>
+                </div></td>
+            </tr>
+            <tr>
+                <td>34</td>
+                <td>span</td>
+                <td><span style='border: 0.3vmin solid black; background-color: grey'>текст</span></td>
+            </tr>
+            <tr>
+                <td>35</td>
+                <td>main</td>
+                <td><main>основное содержимое страницы, уникальное для страницы</main></td>
+            </tr>
+            <tr>
+                <td>36</td>
+                <td>header</td>
+                <td><header>основной заголовок, который содержит символику компании (логотип и т.д.)</header></td>
+            </tr>
+            <tr>
+                <td>37</td>
+                <td>nav</td>
+                <td><nav>панель навигации</nav></td>
+            </tr>
+            <tr>
+                <td>38</td>
+                <td>article</td>
+                <td><article>основной контент веб-страницы</article></td>
+            </tr>
+            <tr>
+                <td>39</td>
+                <td>section</td>
+                <td><section>отдельный раздел основного контента</section></td>
+            </tr>
+            <tr>
+                <td>40</td>
+                <td>aside</td>
+                <td><aside>второстепенный, сопутствующий контент или ссылки</aside></td>
+            </tr>
+            <tr>
+                <td>41</td>
+                <td>footer</td>
+                <td><footer>нижний колонтитул, который обычно содержит информацию об авторских правах, политике конфиденциальности, условий пользования и т.д.</footer></td>
+            </tr>
+            <tr>
+                <td>42</td>
+                <td>hgroup</td>
+                <td><hgroup>заголовок раздела, используемый для группировки набора элементов h1-h6, в тех случаях, когда заголовок имеет множество уровней</hgroup></td>
+            </tr>
+            <tr>
+                <td>43</td>
+                <td>address</td>
+                <td><adress>разметка контактных данных</adress></td>
+            </tr>
+            <tr>
+                <td>44</td>
+                <td>time</td>
+                <td><time>помечает текст внутри элемента <time> как дату, время или оба значения</time></td>
+            </tr>
+            <tr>
+                <td>45</td>
+                <td>figure</td>
+                <td><figure style='width: 20vmin; height: 15vmin; border: 0.3vmin solid black; background-color: grey'>
+                    <div style='border: 0.1vmin solid black; background-color: white'>object1</div>
+                    <div style='border: 0.1vmin solid black; background-color: yellow'>object2</div>
+                    <div style='border: 0.1vmin solid black; background-color: lightblue'>object3</div>
+                    <figcaption>контейнер с элементами</figcaption>
+                </figure></td>
+            </tr>
+        </table>
+        <footer id='footer-page'>
+            <div id='footer-content'>
+                <a id='used-link' href='html-elements.html'>Элементы HTML</a>
+                <a href='css-elements.html'>Элементы CSS</a>
+                <a href='css-flexbox.html'>CSS Flexbox</a>
+                <a href='css-grid.html'>CSS Grid Layout</a>
+                <a href='js-methods.html'>Методы JS</a>
+                <a href='index.html'>РЕЗЮМЕ</a>
+                <p>
+                    <i>kpdan.95@gmail.com | +7 987 902-05-46</i><br>
+                    <b>Элементы HTML | 2021 © Konstantin Dan</b>
+                </p>
+            </div>   
+        </footer>
+        <div id='arrowTop' hidden></div>
+        <script src='./scripts/html-elements.js' type='text/javascript'></script>
+    </body>
+</html>

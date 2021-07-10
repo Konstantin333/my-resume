@@ -1,0 +1,55 @@
+<svg width="500" height="330" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+
+ <g stroke="null">
+  <title>background</title>
+  <rect x="-1" y="-1" width="502" height="332" id="canvas_background" fill="#ffffff" stroke="null"/>
+  <g id="canvasGrid" display="none" stroke="null">
+   <rect id="svg_1" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)" stroke="null"/>
+  </g>
+ </g>
+ <g stroke="null">
+  <title>Layer 1</title>
+  <ellipse fill="#fff" stroke-width="1.5" cx="740.5" cy="84.953125" id="svg_4" ry="0.5" stroke="#000"/>
+  <line fill="none" stroke-width="2.5" x1="142.782961" y1="12.824282" x2="142.782961" y2="328.177583" id="svg_13" stroke-linejoin="null" stroke-linecap="null" stroke="#00862d"/>
+  <ellipse fill="#ffffff" stroke-width="2.5" cx="142.444142" cy="295.318446" id="svg_18" rx="6.014558" ry="6.014558" stroke="#00862d"/>
+  <ellipse fill="#ffffff" stroke-width="2.5" cx="142.444142" cy="17.541266" id="svg_30" rx="6.014558" ry="6.014558" stroke="#000000"/>
+  <ellipse fill="#ffffff" stroke-width="2.5" cx="142.444142" cy="193.202265" id="svg_31" rx="6.014558" ry="6.014558" stroke="#000000"/>
+  <ellipse fill="#ffffff" stroke-width="2.5" cx="142.973242" cy="245.583105" id="svg_32" rx="6.014558" ry="6.014558" stroke="#00862d"/>
+  <ellipse fill="#ffffff" stroke-width="2.5" cx="142.444142" cy="146.641517" id="svg_33" rx="6.014558" ry="6.014558" stroke="#00862d"/>
+  <ellipse fill="#ffffff" stroke-width="2.5" cx="142.64497" cy="60.070056" id="svg_34" rx="6.014558" ry="6.014558" stroke="#000000"/>
+  <ellipse fill="#ffffff" stroke-width="2.5" cx="142.444142" cy="101.138974" id="svg_35" rx="6.014558" ry="6.014558" stroke="#000000"/>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="29.951357" y="299.693573" id="svg_40" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="bold" font-style="normal">июнь</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="80.409622" y="303.030041" id="svg_41" font-size="20" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="bold" font-style="normal">2013</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="31.353236" y="249.693203" id="svg_42" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="bold" font-style="normal">июль</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="81.344208" y="252.562378" id="svg_43" font-size="20" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="bold" font-style="normal">2016</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="13.596096" y="198.758247" id="svg_44" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal">февраль</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="81.811501" y="199.692835" id="svg_45" font-size="20" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal">2019</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="30.885942" y="151.094343" id="svg_46" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="bold" font-style="normal">июль</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="80.409621" y="153.963517" id="svg_47" font-size="20" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="bold" font-style="normal">2020</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="7.521283" y="104.832321" id="svg_48" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal">сентябрь</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="81.876915" y="107.168789" id="svg_49" font-size="20" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal">2020</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="81.811501" y="68.579696" id="svg_51" font-size="20" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal">2020</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="80.480689" y="25.859774" id="svg_53" font-size="20" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal">2020</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="14.997974" y="65.112402" id="svg_54" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal">октябрь</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" x="22.007372" y="24.45789" id="svg_55" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve" font-weight="normal" font-style="normal">ноябрь</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" fill-opacity="null" x="167.126188" y="290.09323" id="svg_56" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve">получение среднего общего образования</text>
+  <line fill="none" stroke-width="1.5" fill-opacity="null" x1="326.215233" y1="317.409088" x2="443.978481" y2="317.409088" id="svg_57" stroke-linejoin="null" stroke-linecap="null" stroke="#00862d"/>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" fill-opacity="null" x="168.995361" y="250.373309" id="svg_60" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve">окончание военной службы (в/ч 11385)</text>
+  <line fill="none" stroke-width="1.5" fill-opacity="null" x1="171.073896" y1="257.128269" x2="428.090504" y2="257.128269" id="svg_61" stroke-linejoin="null" stroke-linecap="null" stroke="#00862d"/>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" fill-opacity="null" x="168.995361" y="197.101886" id="svg_62" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve">прохождение курса JavaScript (Coursera)</text>
+  <line fill="none" stroke-width="1.5" fill-opacity="null" x1="171.073896" y1="203.856845" x2="436.969056" y2="203.856845" id="svg_63" stroke-linejoin="null" stroke-linecap="null" stroke="#00862d"/>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" fill-opacity="null" x="166.658895" y="138.690236" id="svg_64" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve">получение высшего образования</text>
+  <line fill="none" stroke-width="1.5" fill-opacity="null" x1="269.672756" y1="163.669631" x2="440.240119" y2="163.669631" id="svg_65" stroke-linejoin="null" stroke-linecap="null" stroke="#00862d"/>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" fill-opacity="null" x="166.658895" y="103.643253" id="svg_66" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve">прохождение курса HTML (SoloLearn)</text>
+  <line fill="none" stroke-width="1.5" fill-opacity="null" x1="168.270137" y1="110.398212" x2="420.146517" y2="110.398212" id="svg_70" stroke-linejoin="null" stroke-linecap="null" stroke="#00862d"/>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" fill-opacity="null" x="166.191602" y="63.456039" id="svg_72" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve">прохождение курса CSS (SoloLearn)</text>
+  <line fill="none" stroke-width="1.5" fill-opacity="null" x1="167.802844" y1="70.210998" x2="400.987496" y2="70.210998" id="svg_73" stroke-linejoin="null" stroke-linecap="null" stroke="#00862d"/>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" fill-opacity="null" x="165.724309" y="20.932357" id="svg_74" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve">прохождение курса JavaScript (SoloLearn)</text>
+  <line fill="none" stroke-width="1.5" fill-opacity="null" x1="167.335551" y1="27.687316" x2="439.305543" y2="27.687316" id="svg_75" stroke-linejoin="null" stroke-linecap="null" stroke="#00862d"/>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" fill-opacity="null" x="267.126927" y="156.914671" id="svg_78" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve">(СНИУ им. С.П. Королёва)</text>
+  <text fill="#000000" stroke="#00862d" stroke-width="0" fill-opacity="null" x="326.473166" y="310.186836" id="svg_79" font-size="16" font-family="'Times New Roman', Times, serif" text-anchor="start" xml:space="preserve">(МАОУ СОШ №4)</text>
+  <line fill="none" stroke-width="1.5" fill-opacity="null" x1="169.672024" y1="295.446313" x2="323.884119" y2="295.446313" id="svg_80" stroke-linejoin="null" stroke-linecap="null" stroke="#00862d"/>
+  <line fill="none" stroke-width="1.5" fill-opacity="null" x1="169.204728" y1="143.576021" x2="268.743511" y2="143.576021" id="svg_81" stroke-linejoin="null" stroke-linecap="null" stroke="#00862d"/>
+ </g>
+</svg>

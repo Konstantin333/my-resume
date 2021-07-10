@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Элементы CSS</title>
+        <link href='./images/my-photo.png' rel='icon' type='x-icon/image'>
+        <link href='./images/my-photo.png' rel='shortcut-icon' type='x-icon/image'>
+        <link href='./styles/css-elements.css' rel='stylesheet' type='text/css'>
+        <!-- Шрифт Roboto: -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- Шрифт Zen Dots: -->
+        <link rel='preconnect' href='https://fonts.gstatic.com'>
+        <link href='https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap' rel='stylesheet'>
+    </head>
+    <body>
+        <header id='page-title'>
+            <b>ЭЛЕМЕНТЫ CSS</b>
+        </header>
+        <nav id ='item-navigation'>
+            <h1>НАВИГАЦИЯ<br>ПО СВОЙСТВАМ:</h1>
+            <div id='disable-selection'>
+                <input type='button' value='отменить выделение'></div>
+            </div>
+            <p class='element-sections'><u>свойства текста/ основные:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='color'>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='background-color'>
+            <input class='navigation-elements' type='button' value='font-family'>
+            <input class='navigation-elements' type='button' value='font-size'>
+            <input class='navigation-elements' type='button' value='font-weight'>
+            <input class='navigation-elements' type='button' value='text-align'>
+            <input class='navigation-elements' type='button' value='vertical-align'>
+            <input class='navigation-elements' type='button' value='text-decoration'>
+            <input class='navigation-elements' type='button' value='text-transform'>
+            <input class='navigation-elements' type='button' value='font-variant'>
+            <input class='navigation-elements' type='button' value='text-indent'>
+            <input class='navigation-elements' type='button' value='line-height'>
+            <input class='navigation-elements' type='button' value='letter-spacing'>
+            <input class='navigation-elements' type='button' value='word-spacing'>
+            <input class='navigation-elements' type='button' value='white-space'>
+            <input class='navigation-elements' type='button' value='word-wrap'>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='text-shadow'>
+            <p class='element-sections'><u>свойства стилизации списка:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='list-style-type'>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='list-style-position'>
+            <p class='element-sections'><u>свойства фона и градиенты:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='background'>
+            <p class='element-sections'><u>свойства блочной модели:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='width, height, padding и т.д.'>
+            <p class='element-sections'><u>свойства анимации:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='animation & transform'>
+        </nav>
+        <table id='elements-table'>
+            <tr>
+                <td>№ п/п</td>
+                <td>СВОЙСТВО</td>
+                <td>РЕЗУЛЬТАТ</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>
+                    <p><b>color</b>: red;</p>
+                    <p><b>color</b>: #ffd900;</p>
+                    <p><b>color</b>: rgb(0, 255, 85);</p>
+                    <p><b>color</b>:  rgba(0, 110, 255, 0.5);</p>
+                </td>
+                <td>
+                    <p id='property-1-1'><b>цвет селектора (наименование цвета)</b></p>
+                    <p id='property-1-2'><b>цвет селектора (код HEX)</b></p>
+                    <p id='property-1-3'><b>цвет селектора (система rgb)</b></p>
+                    <p id='property-1-4'><b>цвет селектора (система rgba)</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>
+                    <p><b>background-color</b>: red;</p>
+                    <p><b>background-color</b>: #ffd900;</p>
+                    <p><b>background-color</b>: rgb(0, 255, 85);</p>
+                    <p><b>background-color</b>:  rgba(0, 110, 255, 0.5);</p>
+                </td>
+                <td>
+                    <p id='property-2-1'><b>цвет фона селектора (наименование цвета)</b></p>
+                    <p id='property-2-2'><b>цвет фона селектора (код HEX)</b></p>
+                    <p id='property-2-3'><b>цвет фона селектора (система rgb)</b></p>
+                    <p id='property-2-4'><b>цвет фона селектора (система rgba)</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    <p><b>font-family</b>: 'Times New Roman', Times, serif;</p>
+                    <p><b>font-family</b>: Helvetica, Arial, sans-serif;</p>
+                    <p><b>font-family</b>: 'Courier New', Courier, monospace;</p>
+                </td>
+                <td>
+                    <p id='property-3-1'><b>подключаемый шрифт ('Times New Roman')</b></p>
+                    <p id='property-3-2'><b>подключаемый шрифт (Helvetica)</b></p>
+                    <p id='property-3-3'><b>подключаемый шрифт ('Courier New')</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>
+                    <p><b>font-size</b>: 16px;</p>
+                    <p><b>font-size</b>: 1em;</p><br><br>
+                    <p><b>font-size</b>: xx-small;</p>
+                    <p><b>font-size</b>: x-small;</p>
+                    <p><b>font-size</b>: small;</p>
+                    <p><b>font-size</b>: medium;</p>
+                    <p><b>font-size</b>: large;</p>
+                    <p><b>font-size</b>: x-large;</p>
+                    <p><b>font-size</b>: xx-large;</p>
+                </td>
+                <td>
+                    <p id='property-4-1'><b>размер шрифта (в пикселях)</b></p>
+                    <p id='property-4-2'><b>размер шрифта (в em)</b></p><br>
+                    <p><i><u>от меньшего к большему (ключевые слова):</u></i></p>
+                    <p id='property-4-3'><b>размер шрифта</b></p>
+                    <p id='property-4-4'><b>размер шрифта</b></p>
+                    <p id='property-4-5'><b>размер шрифта</b></p>
+                    <p id='property-4-6'><b>размер шрифта</b></p>
+                    <p id='property-4-7'><b>размер шрифта</b></p>
+                    <p id='property-4-8'><b>размер шрифта</b></p>
+                    <p id='property-4-9'><b>размер шрифта</b></p>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>
+                    <p><b>font-weight</b>: 400;</p>
+                    <p><b>font-weight</b>: 900;</p><br><br>
+                    <p><b>font-weight</b>: lighter;</p>
+                    <p><b>font-weight</b>: normal;</p>
+                    <p><b>font-weight</b>: bold;</p>
+                    <p><b>font-weight</b>: bolder;</p>
+                </td>
+                <td>
+                    <p id='property-5-1'>толщина шрифта (минимальное и стандартное значение)</p>
+                    <p id='property-5-2'>толщина шрифта (максимальное значение)</p><br>
+                    <p><i><u>от тоньшего к толщему (ключевые слова):</u></i></p>
+                    <p id='property-5-3'>толщина шрифта</p>
+                    <p id='property-5-4'>толщина шрифта</p>
+                    <p id='property-5-5'>толщина шрифта</p>
+                    <p id='property-5-6'>толщина шрифта</p>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>
+                    <p><b>text-align</b>: left;</p>
+                    <p><b>text-align</b>: center;</p>
+                    <p><b>text-align</b>: right;</p>
+                    <p><b>text-align</b>: justify;</p>
+                </td>
+                <td>
+                    <p id='property-6-1'>выравнивание текста по горизонтали (слева)</p>
+                    <p id='property-6-2'>выравнивание текста по горизонтали (по центру)</p>
+                    <p id='property-6-3'>выравнивание текста по горизонтали (справа)</p>
+                    <p id='property-6-4'>выравнивание текста по горизонтали (по общей ширине строк, а левое и правое поля будут равными)</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>
+                    <p><b>vertical-align</b>: top;</p>
+                    <p><b>vertical-align</b>: middle;</p>
+                    <p><b>vertical-align</b>: bottom;</p>
+                </td>
+                <td>
+                    <p id='property-7-1'>выравнивание текста по вертикали (по верху)</p>
+                    <p id='property-7-2'>выравнивание текста по ширине (по центру)</p>
+                    <p id='property-7-3'>выравнивание текста по ширине (по низу)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>
+                    <p><b>text-decoration</b>: none;</p>
+                    <p><b>text-decoration</b>: inherit;</p>
+                    <p><b>text-decoration</b>: overline;</p>
+                    <p><b>text-decoration</b>: underline;</p>
+                    <p><b>text-decoration</b>: line-through;</p>
+                </td>
+                <td>
+                    <p id='property-8-1'>определяет, как будет декорирован текст (по умолчанию)</p>
+                    <p id='property-8-2'>определяет, как будет декорирован текст (наследование от родителя)</p>
+                    <p id='property-8-3'>определяет, как будет декорирован текст (горизонтальная линия над текстом)</p>
+                    <p id='property-8-4'>определяет, как будет декорирован текст (горизонтальная линия под текстом)</p>
+                    <p id='property-8-5'>определяет, как будет декорирован текст (горизонтальная линия перечёркивающая текст)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>
+                    <p><b>text-transform</b>: none;</p>
+                    <p><b>text-transform</b>: uppercase;</p>
+                    <p><b>text-transform</b>: lowercase;</p>
+                    <p><b>text-transform</b>: capitalize;</p>
+                </td>
+                <td>
+                    <p id='property-9-1'>иЗмеНеНиЕ регистра текста (стандартное значение)</p>
+                    <p id='property-9-2'>иЗмеНеНиЕ регистра текста (изменяет регистр всего текста на верхний)</p>
+                    <p id='property-9-3'>иЗмеНеНиЕ регистра текста (изменяет регистр всего текста на нижний)</p>
+                    <p id='property-9-4'>иЗмеНеНиЕ регистра текста (начинает каждое слово в тексте с заглавной буквы)</p> 
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>
+                    <p><b>font-variant</b>: normal;</p>
+                    <p><b>font-variant</b>: inherit;</p>
+                    <p><b>font-variant</b>: small-caps;</p>
+                </td>
+                <td>
+                    <p id='property-10-1'>шрифт в виде маленьких заглавных букв (стандартный шрифт)</p>
+                    <p id='property-10-2'>шрифт в виде маленьких заглавных букв (наследование от родителя)</p>
+                    <p id='property-10-3'>шрифт в виде маленьких заглавных букв (шрифт в виде маленьких заглавных букв)</p>        
+                </td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>
+                    <p><b>text-indent</b>: inherit;</p>
+                    <p><b>text-indent</b>: 50px;</p>
+                    <p><b>text-indent</b>: 20%;</p>
+                </td>
+                <td>
+                    <p id='property-11-1'>отступ в тексте (наследуемый)</p>
+                    <p id='property-11-2'>отступ в тексте (в пикселях)</p>
+                    <p id='property-11-3'>отступ в тексте (в процентах)</p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>12</td>
+                <td>
+                    <p><b>line-height</b>: 5;</p>
+                </td>
+                <td>
+                    <p id='property-12'>расстояние между буквами<br>в высоту</p>
+                </td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>
+                    <p><b>letter-spacing</b>: 2px;</p>
+                    <p><b>letter-spacing</b>: -1px;</p>
+                </td>
+                <td>
+                    <p id='property-13-1'>расстояние между буквами в ширину (увеличение расстояния)</p>
+                    <p id='property-13-2'>расстояние между буквами в ширину (уменьшение расстояния)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>
+                    <p><b>word-spacing</b>: 10px;</p>
+                    <p><b>word-spacing</b>: -5px;</p>
+                </td>
+                <td>
+                    <p id='property-14-1'>расстояние между словами в ширину (увеличение расстояния)</p>
+                    <p id='property-14-2'>расстояние между словами в ширину (уменьшение расстояния)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>
+                    <p><b>white-space</b>: normal;</p>
+                    <p><b>white-space</b>: inherit;</p>
+                    <p><b>white-space</b>: pre;</p>
+                    <p><b>white-space</b>: pre-wrap;</p>
+                </td>
+                <td>
+                    <p id='property-15-1'>отображение            пробелов  и переносов              в тексте (стандартное отображение пробелов)</p>
+                    <p id='property-15-2'>отображение            пробелов  и переносов              в тексте (наследование от родителя)</p>
+                    <p id='property-15-3'>отображение            пробелов  и переносов              в тексте (с учётом всех пробелов и переносов)</p>
+                    <p id='property-15-4'>отображение            пробелов  и переносов              в тексте (добавляются новые строки переноса при необходимости)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>
+                    <p><b>word-wrap</b>: normal;</p>
+                    <p><b>word-wrap</b>: break-word;</p>
+                </td>
+                <td>
+                    <p id='property-16-1'>разбивает длинные слова и переносит их на следующую строку (стандартное)</p>
+                    <p id='property-16-2'>разбивает длинные слова и переносит их на следующую строку (разбивает слово, если оно не помещается по ширине в заданную область, и переносит на следующую строку)</p>
+                </td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>
+                    <p><b>text-shadow</b>: 2px 2px 2px orange;</p>
+                </td>
+                <td>
+                    <p id='property-17'>тень текста</p>
+                </td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>
+                    <p><b>list-style-type</b>: disc;</p>
+                    <p><b>list-style-type</b>: circle;</p>
+                    <p><b>list-style-type</b>: square;</p>
+                    <p><b>list-style-type</b>: decimal;</p>
+                    <p><b>list-style-type</b>: lower-roman;</p>
+                    <p><b>list-style-type</b>: upper-roman;</p>
+                    <p><b>list-style-type</b>: lower-alpha;</p>
+                    <p><b>list-style-type</b>: upper-alpha;</p>
+                </td>
+                <td>
+                    <ul>
+                        <li id='property-18-1'>различные списки маркеров или нумерации в html-списках (в < ul >)</li>
+                        <li id='property-18-2'>различные списки маркеров или нумерации в html-списках (в < ul >)</li>
+                        <li id='property-18-3'>различные списки маркеров или нумерации в html-списках (в < ul >)</li>
+                        <li id='property-18-4'>различные списки маркеров или нумерации в html-списках (в < ol >)</li>
+                        <li id='property-18-5'>различные списки маркеров или нумерации в html-списках (в < ol >)</li>
+                        <li id='property-18-6'>различные списки маркеров или нумерации в html-списках (в < ol >)</li>
+                        <li id='property-18-7'>различные списки маркеров или нумерации в html-списках (в < ol >)</li>
+                        <li id='property-18-8'>различные списки маркеров или нумерации в html-списках (в < ol >)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>
+                    <p><b>list-style-position</b>: inside;</p>
+                    <p><b>list-style-position</b>: outside;</p>
+                </td>
+                <td>
+                    <ul>
+                        <li id='property-19-1'>устанавливает, как будет размещаться маркер относительно текста (внутри)</li>
+                        <li id='property-19-2'>устанавливает, как будет размещаться маркер относительно текста (снаружи)</li>
+                    </ul>
+                    <ol>
+                        <li id='property-19-1'>устанавливает, как будет размещаться маркер относительно текста (внутри)</li>
+                        <li id='property-19-2'>устанавливает, как будет размещаться маркер относительно текста (снаружи)</li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>
+                    <p><b>background: url </b><br>(https://www.svgx.ru/<br>svg/1991840.svg);</p>
+                    <p><b>background-size</b>: <br>100px 100px;</p><br>
+                    <p><b>background: linear-gradient</b>(100deg, deepskyblue, black);</p><br>
+                    <p><b>background: repeating-linear-gradient</b>(lightgreen, lightyellow);</p><br>
+                    <p><b>background: radial-gradient</b>(circle, yellow 20%, lightyellow 40%, lightskyblue 70%);</p><br>
+                </td>
+                <td>
+                    <div id='properties-20-1'></div><br><br>
+                    <div id='properties-20-2'></div><br><br>
+                    <div id='properties-20-3'></div><br><br>
+                    <div id='properties-20-4'></div>
+                </td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>
+                    <p id='paragraph-21-1'>div {</p>
+                    <p id='paragraphs-21'><b>width</b>: 200px;</p>
+                    <p id='paragraphs-21'><b>height</b>: 200px;</p>
+                    <p id='paragraphs-21'><b>padding</b>: 5px;</p>
+                    <p id='paragraphs-21'><b>border</b>: 2px solid black;</p>
+                    <p id='paragraphs-21'><b>border-radius</b>: 100%;</p>
+                    <p id='paragraphs-21'><b>margin</b>: 5px;</p>
+                    <p id='paragraphs-21'><b>opacity</b>: 90%;</p>
+                    <p id='paragraphs-21'><b>box-shadow</b>: 2px 2px 2px 2px black;</p>
+                    <p id='paragraph-21-1'>}</p>
+                </td>
+                <td>
+                    <div id='properties-21'></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>22</td>
+                <td>
+                    <p id='paragraph-22-1'><b>animation:</b> <u>animateobject</u> 5s linear 0s infinite normal;</p>
+                    <p id='paragraph-22-1'><b>@keyframes <u>animateobject</u> {</b></p>
+                    <p id='paragraphs-22'>0% {<br>transform: rotate(160deg)<br>} 50% {<br>transform: rotate(-160deg)<br>}
+                        100% {<br>transform: rotate(160deg)<br>}</p>
+                    <p id='paragraph-22-1'><b>}</b></p>
+                    <p id='paragraphs-22'><b>transform:</b> rotate(45deg);</p>
+                    <p id='paragraphs-22'><b>transform:</b> translate(20px, 0);</p>  
+                    <p id='paragraphs-22'><b>transform:</b> skew(10deg, 20deg);</p>  
+                    <p id='paragraphs-22'><b>transform:</b> scale(1, 0.5); и т.д.</p>   
+                </td>
+                <td>
+                    <div id='properties-22'>
+                        <div id='property-22-1'></div>
+                        <div id='property-22-2'></div>
+                        <div id='property-22-3'></div>
+                        <div id='property-22-4'></div>
+                        <div id='property-22-5'></div>
+                        <div id='property-22-6'></div>
+                        <div id='property-22-7'></div>
+                        <div id='property-22-8'></div>
+                        <div id='property-22-9'></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <footer id='footer-page'>
+            <div id='footer-content'>
+                <a href='html-elements.html'>Элементы HTML</a>
+                <a id='used-link' href='css-elements.html'>Элементы CSS</a>
+                <a href='css-flexbox.html'>CSS Flexbox</a>
+                <a href='css-grid.html'>CSS Grid Layout</a>
+                <a href='js-methods.html'>Методы JS</a>
+                <a href='index.html'>РЕЗЮМЕ</a>
+                <p>
+                    <i>kpdan.95@gmail.com | +7 987 902-05-46</i><br>
+                    <b>Элементы CSS | 2021 © Konstantin Dan</b>
+                </p>
+            </div>   
+        </footer>
+        <div id='arrowTop' hidden></div>
+        <script src='./scripts/css-elements.js' type='text/javascript'></script>
+    </body>
+</html>

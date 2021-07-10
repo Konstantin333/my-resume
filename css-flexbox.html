@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>CSS Flexbox</title>
+        <link href='./images/my-photo.png' rel='icon' type='x-icon/image'>
+        <link href='./images/my-photo.png' rel='shortcut-icon' type='x-icon/image'>
+        <link href='./styles/css-flexbox.css' rel='stylesheet' type='text/css'>
+        <!-- Шрифт Roboto: -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- Шрифт Zen Dots: -->
+        <link rel='preconnect' href='https://fonts.gstatic.com'>
+        <link href='https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap' rel='stylesheet'>
+    </head>
+    <body>
+        <header id='page-title'>
+            <b>CSS Flexbox</b>
+        </header>
+        <nav id ='item-navigation'>
+            <h1>НАВИГАЦИЯ<br>ПО СВОЙСТВАМ:</h1>
+            <div id='disable-selection'>
+                <input type='button' value='отменить выделение'></div>
+            </div>
+            <p class='element-sections'><u>Создание flex-контейнера:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='display: flex;'>
+            <p class='element-sections'><u>Определение направления главной оси:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='flex-direction'>
+            <p class='element-sections'><u>Выравнивание элементов вдоль главной оси:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='justify-content'>
+            <p class='element-sections'><u>Выравнивание элементов вдоль поперечной оси:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='align-items'>
+            <p class='element-sections'><u>Выравнивание отдельного элемента внутри контейнера:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='align-self'>
+            <p class='element-sections'><u>Изменение размера элементов контейнера:</u></p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='flex'>
+        </nav>
+        <article>
+            <section>
+                <h1 class='section-heading'>1.<br>Создание flex-контейнера:</h1>
+                <div id='container-1-1' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: block</br>(по умолчанию);</b></span>
+                <div id='container-1-2' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</b></span>
+            </section>
+            <section>
+                <h1 class='section-heading'>2.<br>Определение направления главной оси</h1>
+                <div id='container-2-1' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: column;</b></span>
+                <div id='container-2-2' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row</br>(по умолчанию);</b></span>
+                <div id='container-2-3' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: column-reverse;</b></span>
+                <div id='container-2-4' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row-reverse;</b></span>  
+            </section>
+            <section>
+                <h1 class='section-heading'>3.<br>Выравнивание элементов контейнера вдоль главной оси</h1>
+                <div id='container-3-1' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). justify-content: flex-start;</br>(по умолчанию)</b></span>
+                <div id='container-3-2' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). justify-content: center;</b></span>
+                <div id='container-3-3' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). justify-content: flex-end;</b></span>
+                <div id='container-3-4' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). justify-content: space-between;</b></span>
+                <div id='container-3-5' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). justify-content: space-around;</b></span>
+            </section>
+            <section>
+                <h1 class='section-heading'>4.<br>Выравнивание элементов контейнера вдоль поперечной оси</h1>
+                <div id='container-4-1' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). align-items: flex-start</br>(по умолчанию);</b></span>
+                <div id='container-4-2' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). align-items: center;</b></span>
+                <div id='container-4-3' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). align-items: flex-end;</b></span>
+                <div id='container-4-4' class='containers'>
+                    <div id='box-1' class='boxes' style='height: auto;'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes' style='height: auto;'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). align-content: stretch;</br></br>#box-1, #box-3 {</br>heigth: auto; }</b></span>
+                <div id='container-4-5' class='containers'>
+                    <div id='box-1' class='boxes' style='height: auto;'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes' style='height: auto;'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). align-content: baseline;</br></br>#box-1, #box-3 {</br>heigth: auto; }</b></span>
+                <div id='container-4-6' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). justify-content: center;</br>4). align-items: center;</b></span>
+                <div id='container-4-7' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: column;</br>3). justify-content: space-between;</br>4). align-items: flex-end;</b></span>
+            </section>
+            <section>
+                <h1 class='section-heading'>5.<br>Выравнивание отдельного(ых) элемента(ов) внутри контейнера</h1>
+                <div id='container-5-1' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). align-items: flex-start;</br></br>
+                #box-3, #box-4 {</br>align-self: flex-end; }</b></span>
+                <div id='container-5-2' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). align-items: flex-start;</br></br>
+                #box-2, #box-3 {</br>align-self: center; }</b></span>
+                <div id='container-5-3' class='containers'>
+                    <div id='box-1' class='boxes'><p>1</p></div>
+                    <div id='box-2' class='boxes'><p>2</p></div>
+                    <div id='box-3' class='boxes'><p>3</p></div>
+                    <div id='box-4' class='boxes'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br>3). align-items: flex-start;</br></br>
+                #box-2 {</br>align-self: stretch;}</br>#box-4 {</br>align-self: baseline;}</b></span>
+            </section>
+            <section>
+                <h1 class='section-heading'>6.<br>Изменение размера элементов контейнера</h1>
+                <div id='container-6-1' class='containers'>
+                    <div id='box-1' class='boxes-2'><p>1</p></div>
+                    <div id='box-2' class='boxes-2'><p>2</p></div>
+                    <div id='box-3' class='boxes-2'><p>3</p></div>
+                    <div id='box-4' class='boxes-2'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br></br>.boxes {</br>flex: 1 0; }</br>#box-2 {</br>flex: 1 0; }</b></span>
+                <div id='container-6-2' class='containers'>
+                    <div id='box-1' class='boxes-2'><p>1</p></div>
+                    <div id='box-2' class='boxes-2'><p>2</p></div>
+                    <div id='box-3' class='boxes-2'><p>3</p></div>
+                    <div id='box-4' class='boxes-2'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br></br>.boxes {</br>flex: 10 0; }</br>#box-2 {</br>flex: 1 0; }</b></span>
+                <div id='container-6-3' class='containers'>
+                    <div id='box-1' class='boxes-2'><p>1</p></div>
+                    <div id='box-2' class='boxes-2'><p>2</p></div>
+                    <div id='box-3' class='boxes-2'><p>3</p></div>
+                    <div id='box-4' class='boxes-2'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br></br>.boxes {</br>flex: 1 0; }</br>#box-2 {</br>flex: 10 0; }</b></span>
+                <div id='container-6-4' class='containers'>
+                    <div id='box-1' class='boxes-2'><p>1</p></div>
+                    <div id='box-2' class='boxes-2'><p>2</p></div>
+                    <div id='box-3' class='boxes-2'><p>3</p></div>
+                    <div id='box-4' class='boxes-2'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br></br>.boxes {</br>flex: 10 0; }</br>#box-2 {</br>flex: 10 0; }</b></span>
+                <div id='container-6-5' class='containers'>
+                    <div id='box-1' class='boxes-2'><p>1</p></div>
+                    <div id='box-2' class='boxes-2'><p>2</p></div>
+                    <div id='box-3' class='boxes-2'><p>3</p></div>
+                    <div id='box-4' class='boxes-2'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br></br>.boxes {</br>flex: 1 1; }</br>#box-2 {</br>flex: 1 1; }</b></span>
+                <div id='container-6-6' class='containers'>
+                    <div id='box-1' class='boxes-2'><p>1</p></div>
+                    <div id='box-2' class='boxes-2'><p>2</p></div>
+                    <div id='box-3' class='boxes-2'><p>3</p></div>
+                    <div id='box-4' class='boxes-2'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br></br>.boxes {</br>flex: 0 1; }</br>#box-2 {</br>flex: 0 1; }</b></span>
+                <div id='container-6-7' class='containers'>
+                    <div id='box-1' class='boxes-2'><p>1</p></div>
+                    <div id='box-2' class='boxes-2'><p>2</p></div>
+                    <div id='box-3' class='boxes-2'><p>3</p></div>
+                    <div id='box-4' class='boxes-2'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br></br>.boxes {</br>flex: 0 5; }</br>#box-2 {</br>flex: 10 0; }</b></span>
+                <div id='container-6-8' class='containers'>
+                    <div id='box-1' class='boxes-2'><p>1</p></div>
+                    <div id='box-2' class='boxes-2'><p>2</p></div>
+                    <div id='box-3' class='boxes-2'><p>3</p></div>
+                    <div id='box-4' class='boxes-2'><p>4</p></div>
+                </div>
+                <span class='container-signatures'><b>1). display: flex;</br>2). flex-direction: row;</br></br>.boxes {</br>flex: 10 0; }</br>#box-2 {</br>flex: 0 5; }</b></span>
+            </section>
+        </article>
+        <footer id='footer-page'>
+            <div id='footer-content'>
+                <a href='html-elements.html'>Элементы HTML</a>
+                <a href='css-elements.html'>Элементы CSS</a>
+                <a id='used-link' href='css-flexbox.html'>CSS Flexbox</a>
+                <a href='css-grid.html'>CSS Grid Layout</a>
+                <a href='js-methods.html'>Методы JS</a>
+                <a href='index.html'>РЕЗЮМЕ</a>
+                <p>
+                    <i>kpdan.95@gmail.com | +7 987 902-05-46</i><br>
+                    <b>CSS Flexbox | 2021 © Konstantin Dan</b>
+                </p>
+            </div>   
+        </footer>
+        <div id='arrowTop' hidden></div>
+        <script src='./scripts/css-flexbox.js' type='text/javascript'></script>
+    </body>
+</html>

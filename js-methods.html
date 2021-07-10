@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Методы Javascript</title>
+        <link href='./images/my-photo.png' rel='icon' type='x-icon/image'>
+        <link href='./images/my-photo.png' rel='shortcut-icon' type='x-icon/image'>
+        <link href='./styles/js-methods.css' rel='stylesheet' type='text/css'>
+        <!-- Шрифт Roboto: -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- Шрифт Zen Dots: -->
+        <link rel='preconnect' href='https://fonts.gstatic.com'>
+        <link href='https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap' rel='stylesheet'>
+    </head>
+    <body>
+        <header id='page-title'>
+            <b>МЕТОДЫ JAVASCRIPT</b>
+        </header>
+        <nav id ='item-navigation'>
+            <h1>НАВИГАЦИЯ<br>ПО МЕТОДАМ:</h1>
+            <div id='disable-selection'>
+                <input type='button' value='отменить выделение'></div>
+            </div>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='число и его методы'>
+            <p class='element-sections'>Math() | .toFixed() | Number.parseInt() | Number.parseFloat() | Number() | Number.isNaN() | и т. д.</p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='строка и её методы'>
+            <p class='element-sections'>.charAt() | length | .repeat() | .slice() | .toLowerCase() | eval() | .indexOf() | String() | .codePointAt() | и т. д.</p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='массив и его методы'>
+            <p class='element-sections'>.forEach() | .map() | .find() | .reduce() | Array.isArray() | length | .sort() | .concat() | .push() | for ... of | и т. д.</p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='объект и его методы'>
+            <p class='element-sections'>Object.keys() | .defineProperty() | Object.freeze() | for ... in | get & set | Date() | Map() | WeakSet() | и т.д.</p>
+            <input class='navigation-elements' id='navigation-item-per-line' type='button' value='функция и её методы'>
+            <p class='element-sections'>arguments.length | ...args | new Function() | .call() | .apply() | .bind() | </p>
+        </nav>
+        <table id='elements-table'>
+            <tr>
+                <td>№ п/п</td>
+                <td>ТИП ДАННЫХ</td>
+                <td>МЕТОДЫ, ИХ ОПИСАНИЕ И ПРИМЕРЫ</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>ЧИСЛО<br>(typeof === 'number')</td>
+                <td>
+                    1. <b>Math.random();</b> – возвращает случайное число от 0 до 1:
+                    <div class='codeJs'>console.log( Math.random() ); // 0.6357965708679065</div><hr>
+                    2. <b>Math.min(numb1, numb2, ..., numbN);</b> – возвращает минимальное число:
+                    <div class='codeJs'>console.log( Math.min(1, 2, 3, -3, 0, -22) ); // -22</div><hr>
+                    3. <b>Math.max(numb1, numb2, ..., numbN);</b> – возвращает максимальное число:
+                    <div class='codeJs'>console.log( Math.max(1, 2, 3, -3, 0, -22) ); // 3</div><hr>
+                    4. <b>Math.round(numb);</b> – округляет до ближайшего целого числа:
+                    <div class='codeJs'>console.log( Math.round(3.2) ); // 3<br>
+                    console.log( Math.round(-4.7) ); // -5</div><hr>
+                    5. <b>Math.ceil(numb);</b> – округляет в большую сторону:
+                    <div class='codeJs'>console.log( Math.ceil(3.2) ); // 4<br>
+                    console.log( Math.ceil(-4.7) ); // -4</div><hr>
+                    6. <b>Math.floor(numb);</b> – округляет в меньшую сторону:
+                    <div class='codeJs'>console.log( Math.floor(3.2) ); // 3<br>
+                    console.log( Math.floor(-4.7) ); // -5</div><hr>
+                    7. <b>Math.trunc(numb);</b> – производит удаление дробной части без округления:
+                    <div class='codeJs'>console.log( Math.trunc(3.713) ); // 3</div><hr>
+                    8. <b>Math.pow(x, n);</b> – возводит число (x) в степень (n):
+                    <div class='codeJs'>console.log( Math.pow(-5, 3) ); // -125</div><hr>
+                    9. <b>Math.sqrt(numb);</b> – возвращает квадратный корень из числа:
+                    <div class='codeJs'>console.log( Math.sqrt(81) ); // 9</div><hr>
+                    10. <b>Math.abs(numb);</b> – возвращает модуль числа:
+                    <div class='codeJs'>console.log( Math.abs(-25) ); // 25</div><hr>
+                    11.1. <b>e (экспоненциальная запись числа)</b> – умножает число на 1 с указанным количеством нулей после <b>e</b>:
+                    <div class='codeJs'>console.log(1000000); // 1000000<br>
+                    console.log(1e6); // 1000000</div><hr>
+                    11.2. <b>e-n (экспоненциальная запись числа)</b> – делит число на 1 с указанным количеством нулей после <b>e</b>:
+                    <div class='codeJs'>console.log(0.000001); // 0.000001<br>
+                    console.log(1e-6); // 0.000001</div><hr>
+                    12. <b>.toFixed(numb);</b> – указывает, до скольки знаков после запятой мы хотим округлить число:
+                    <div class='codeJs'>let num = 12.12345;<br><br>
+                    console.log(num.toFixed(2)); // 12.12</div><hr>
+                    13. <b>Number.parseInt(str, radix);</b> – преобразует значение str в целое число по системе счисления radix:
+                    <div class='codeJs'>console.log( Number.parseInt('17.1', 10) ); // 17</div><hr>
+                    14. <b>Number.parseFloat(str);</b> – преобразует значение str в число по десятичной системе счисления:
+                    <div class='codeJs'>console.log( Number.parseFloat('17.1') ); // 17.1</div><hr>
+                    15. <b>Number(str);</b> – преобразует значение str в число:
+                    <div class='codeJs'>let str = '2021';<br>
+                    let num = Number(str);<br><br>
+                    console.log(num); // 2021<br>
+                    console.log(typeof num === 'number'); // true</div><hr>
+                    16. <b>Number.isNaN(value);</b> – определяет, является ли переданное значение value значением NaN:
+                    <div class='codeJs'>console.log( Number.isNaN(123) ); // false<br>
+                    console.log( Number.isNaN(NaN) ); // true</div><hr>
+                    17. <b>Number.isFinite(value);</b> – определяет, является ли переданное значение value конечным числом:
+                    <div class='codeJs'>console.log( Number.isFinite(123) ); // true<br>
+                    console.log( Number.isFinite(Infinity) ); // false</div><hr>
+                    18. <b>Number.isInteger(value);</b> – определяет, является ли тип переданного значения value «числом», а само число – целым значением:
+                    <div class='codeJs'>console.log( Number.isInteger(123) ); // true<br>
+                    console.log( Number.isInteger(12.3) ); // false</div><hr>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>СТРОКА<br>(typeof === 'string')</td>
+                <td>
+                    1. <b>.charAt(i);</b> – возвращает указанный символ i из строки:
+                    <div class='codeJs'>let str = 'Hello, my friend!';<br><br>
+                    console.log(str); // 'Hello, my friend!'<br>
+                    console.log(str.charAt(0)); // 'H' - равноценно str[0]<br>
+                    console.log(str.charAt(12)); // 'i' - равноценно str[12]</div><hr>
+                    2. <b>.length;</b> – возвращает длину строки (количество символов в строке):
+                    <div class='codeJs'>let str = 'cat';<br><br>
+                    console.log(str.length); // 3</div><hr>
+                    3. <b>.repeat(n);</b> – повторяет строку n раз:
+                    <div class='codeJs'>let str = 'String';<br><br>
+                    console.log(str.repeat(3)); // 'StringStringString'</div><hr>
+                    4. <b>.substring(a, b);</b> – создание новой строки путём разделение, где a – начало новой строки (включительно), а b – конец строки:
+                    <div class='codeJs'>let str = 'String';<br>
+                    let newStr = str.substring(2, 5); <br><br>
+                    console.log(newStr); // 'rin'<br>
+                    console.log(str); // 'String'</div><hr>
+                    5. <b>.slice(a, b);</b> – обрезание строки от a (включительно) до b:
+                    <div class='codeJs'>let str = 'String';<br>
+                    let str2 = str.slice(2, 5);<br><br>
+                    console.log(str2); // 'rin'<br>
+                    console.log(str); // 'String'</div><hr>
+                    6. <b>.toLowerCase();</b> – приводит всю строку к нижнему регистру:
+                    <div class='codeJs'>let str = 'cAtS';<br><br>
+                    console.log(str.toLowerCase()); // 'cats'</div><hr>
+                    7. <b>.toUpperCase();</b> – приводит всю строку к верхнему регистру:
+                    <div class='codeJs'>let str = 'cAtS';<br><br>
+                    console.log(str.toUpperCase()); // 'CATS'</div><hr>
+                    8. <b>.concat(string1, string2,... stringN);</b> - объединяет текст из двух или более строк и возвращает новую строку:
+                    <div class='codeJs'>let str1 = 'This is ', str2 = 'my ', str3 = 'new ', str4 = 'line!';<br>
+                    let newStr = str1.concat(str2, str3, str4);<br><br>
+                    console.log(newStr); // 'This is my new line!'</div><hr>
+                    9. <b>.trim();</b> – удаляет пробельные символы с обеих сторон:
+                    <div class='codeJs'>let str = '   cats   ';<br><br>
+                    console.log(str.trim()); // 'cats'</div><hr>
+                    10. <b>.eval(expression);</b> – интерпритация кода expression в виде строки:
+                    <div class='codeJs'>function calcExpression(str) {<br>
+                    <pre>    return eval(str);</pre> 
+                    }<br><br>console.log( calcExpression( 1 + 2 * 3 ) ); // 7<br>
+                    console.log( calcExpression( 3 ** 3 ) ); // 27</div><hr>
+                    11. <b>.indexOf('str');</b> – ищет часть строки str c её начала, если находит, то возвращает индекс первого символа искомой части, если нет, то выводит -1:
+                    <div class='codeJs'>let str = 'cats';<br><br>
+                    console.log(str.indexOf('cat')); // 0<br>
+                    console.log(str.indexOf('dog')); // -1</div><hr>
+                    12. <b>.lastIndexOf('str');</b> – ищет часть строки str c её конца, если находит, то возвращает индекс первого символа искомой части,
+                    если нет, то выводит -1:
+                    <div class='codeJs'>let str = 'cats';<br><br>
+                    console.log(str.lastIndexOf('cat')); // 0<br>
+                    console.log(str.lastIndexOf('dog')); // -1</div><hr>
+                    13. <b>.startsWith('str', index);</b> – проверяет начинается ли строка с подстроки str, если да, то возвращает true, если нет – false
+                    (index – необязательный параметр, который принимает индекс строки, с которого следует начать поиск):
+                    <div class='codeJs'>console.log('itIsBeautiful'.startsWith('itIs')); // true<br>
+                    console.log('itIsBeautiful'.startsWith('itis')); // false<br>
+                    console.log('itIsBeautiful'.startsWith('itIs', 0)); // true</div><hr>
+                    14. <b>.endsWith('str', index);</b> – проверяет заканчивается ли строка подстрокой str, если да, то возвращает true, если нет – false
+                    (index – необязательный параметр, который принимает индекс строки, с которого следует начать поиск):
+                    <div class='codeJs'>console.log('itIsBeautiful'.endsWith('utiful')); // true<br>
+                    console.log('itIsBeautiful'.endsWith('utiful', 0)); // false<br>
+                    console.log('itIsBeautiful'.endsWith('utiful', 13)); // true</div><hr>
+                    15. <b>.includes('str', index);</b> – проверяет содержит ли строка подстроку str, если да, то возвращает true, если нет – false
+                    (index – необязательный параметр, который принимает индекс строки, с которого следует начать поиск):
+                    <div class='codeJs'>console.log('itIsBeautiful'.includes('itIs')); // true<br>
+                    console.log('itIsBeautiful'.includes('Beau', 0)); // true<br>
+                    console.log('itIsBeautiful'.includes('Beau', 6)); // false</div><hr>
+                    16. <b>String(value);</b> – преобразует значение value в строку:
+                    <div class='codeJs'>let num = 25;<br>
+                    let bool = true;<br>
+                    let arr = [ 1, 2, 3 ];<br><br>
+                    console.log(typeof String(num) === 'string'); // true -> '25'<br>
+                    console.log(typeof String(bool) === 'string'); // true -> 'true'<br>
+                    console.log(typeof String(arr) === 'string'); // true -> '1,2,3'</div><hr>
+                    17. <b>.toString(notation);</b> – возвращает строковое представление числа по системе счисления notation:
+                    <div class='codeJs'>let num = 255;<br><br>
+                    console.log(num.toString(2)); // '11111111'<br>
+                    console.log(num.toString(8)); // '377'<br>
+                    console.log(num.toString(10)); // '255'<br>
+                    console.log(num.toString(16)); // 'ff'</div><hr>
+                    18. <b>.codePointAt(pos);</b> – возвращает код для символа, находящегося на позиции pos:
+                    <div class='codeJs'>let name = 'Cat';<br><br>
+                    console.log(name.codePointAt(0)); // 67<br>
+                    console.log(name.codePointAt(1)); // 97<br>
+                    console.log(name.codePointAt(2)); // 116<br>
+                    console.log(name.codePointAt(3)); // undefined</div><hr>
+                    19. <b>String.fromCodePoint(code);</b> – cоздаёт символ по его коду code:
+                    <div class='codeJs'>console.log(`${String.fromCodePoint(67)}${String.fromCodePoint(97)}${String.fromCodePoint(116)}`); // 'Cat'</div><hr>
+                    20. <b>.padStart(targetLength, padString);</b> – позволяет дополнить текущую строку с начала, где: targetLength – заданная длина строки,
+                    padString – добавляемая строка:
+                    <div class='codeJs'>let str = 'text';<br><br>
+                    console.log(str.padStart(13, 'It is my ')); // 'It is my text'<br>
+                    console.log(str.padStart(10, 'It is my ')); // 'It is text'</div><hr>
+                    21. <b>.padEnd(targetLength, padString);</b> – позволяет дополнить текущую строку с конца, где: targetLength – заданная длина строки,
+                    padString – добавляемая строка:
+                    <div class='codeJs'>let str = 'text';<br><br>
+                    console.log(str.padEnd(12, ' is good')); // 'text is good'<br>
+                    console.log(str.padEnd(7, ' is good')); // 'text is'</div><hr>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>МАССИВ<br>(typeof === 'object')</td>
+                <td>
+                    1. <b>.forEach(callback);</b> – выполняет указанную функцию один раз для каждого элемента в массиве:
+                    <div class='codeJs'>const array = [ 1, 2, 4, 8, 16 ];<br>
+                    const myNewArray = new Array();<br>
+                    const eachhed = array.forEach( (e, i) => myNewArray[i] = e + 1 );<br><br>
+                    console.log(myNewArray); // [ 2, 3, 5, 9, 17 ]</div><hr>
+                    2. <b>.map(callback);</b> – создаёт новый массив с результатом вызова указанной функции для каждого элемента массива:
+                    <div class='codeJs'>const array = [ 1, 2, 4, 8, 16 ];<br>
+                    const mapped = array.map( e => e * 2 );<br><br>
+                    console.log(mapped); // [ 2, 4, 8, 16, 32 ]</div><hr>
+                    3. <b>.filter(callback);</b> – создаёт новый массив со всеми элементами, прошедшими проверку (true or false), задаваемую в передаваемой функции:
+                    <div class='codeJs'>const array = [ 1, 2, 4, 8, 16 ];<br>
+                    const filtered = array.filter( e => e >= 2 && e <= 8 );<br><br>
+                    console.log(filtered); // [ 2, 4, 8 ]</div><hr>
+                    4. <b>.find(callback);</b> – возвращает значение первого найденного в массиве элемента, которое удовлетворяет условию функции, иначе возвращает undefined:
+                    <div class='codeJs'>const array = [ 1, 2, 4, 8, 16 ];<br>
+                    const finded = array.find( e => e > 2 );<br><br>
+                    console.log(finded); // 4</div><hr>
+                    5. <b>.findIndex(callback);</b> – возвращает индекс первого найденного в массиве элемента, который удовлетворяет условию функции, иначе возвращает undefined:
+                    <div class='codeJs'>const array = [ 1, 2, 4, 8, 16 ];<br>
+                    const finded = array.findIndex( e => e > 2 );<br><br>
+                    console.log(finded); // 2</div><hr>
+                    6. <b>.reduce(callback);</b> – применяет функцию к аккумулятору (последнее вернувшееся значение reduce) и к каждому значению массива (слева-направо),
+                    сводя его к одному значению:
+                    <div class='codeJs'>const array = [ 1, 2, 4, 8, 16 ];<br>
+                    const reduced = array.reduce( (previous, current) => previous + current );<br><br>
+                    console.log(reduced); // 31 </div><hr>
+                    7. <b>.every(callback);</b> – проверяет удовлятворяют ли все элементы условию, если да, то возвращает true, если нет - false:
+                    <div class='codeJs'>let isEvery = [ 1, 2, 3, '5' ].every( e => e > 2 );<br><br>
+                    console.log(isEvery); // false</div><hr>
+                    8. <b>.some(callback);</b> – проверяет удовлятворяет ли хоть один элемент условию, если да, то возвращает true, если нет - false:
+                    <div class='codeJs'>let isSome = [ 1, 2, 3, '5' ].some( e => e > 2 );<br><br>
+                    console.log(isSome); // true</div><hr>
+                    9. <b>.includes(item);</b> – проверяет содержится ли в массиве item, если да, то возвращает true, если нет - false:
+                    <div class='codeJs'>const array = [ 1, 2, 4, 8, 16 ];<br><br>
+                    console.log(array.includes(4)); // true<br>
+                    console.log(array.includes(5)); // false</div><hr>
+                    10. <b>Array.isArray(arr);</b> – возвращает true, если объект является массивом и false, если не является:
+                    <div class='codeJs'>const arr = [ 1, 2, 3 ];<br>
+                    const obj = { a: 1, b: 2, c: 3 };<br><br>
+                    console.log( Array.isArray(arr) ); // true<br>
+                    console.log( Array.isArray(obj) ); // false</div><hr>
+                    11. <b>.length;</b> – возвращает длину массива:
+                    <div class='codeJs'>const array = [ 1, [ [ 1 ], 2 ], 3 ];<br><br>
+                    console.log(array.length); // 3<br>
+                    console.log(array[1].length); // 2<br>
+                    console.log(array[1][0].length); // 1</div><hr>
+                    12. <b>.sort();</b> – сортирует массив:
+                    <div class='codeJs'>const sorted = [ 19, 2, -18, 0, -3, -5, 1, 3 ].sort( (a, b) => a - b);<br><br>
+                    console.log(sorted); // [ -18, -5, -3, 0, 1, 2, 3, 19 ]</div><hr>
+                    13. <b>.slice(a, b);</b> – обрезает массив от элемента a (включительно) до элемента b:
+                    <div class='codeJs'>const array = [ 1, 2, 3, 4, 5 ];<br>
+                    const newArray = array.slice();<br>
+                    const newArray2 = array.slice(1, 4);<br><br>
+                    console.log(newArray); // [ 1, 2, 3, 4, 5 ]<br>
+                    console.log(newArray2); // [ 2, 3, 4 ]</div><hr>
+                    14. <b>.concat(element1, element2, ... elementN);</b> – копирует массив (создаёт новый) и добавляет новые элементы:
+                    <div class='codeJs'>const array = [ 1, 2, 3 ];<br>
+                    const newArray = array.concat();<br>
+                    const newArray2 = array.concat(4, 5);<br><br>
+                    console.log(newArray); // [ 1, 2, 3 ]<br>
+                    console.log(newArray2); // [ 1, 2, 3, 4, 5 ]</div><hr>
+                    15. <b>оператор spread, т.е. […array];</b> – копирует элементы массива в новый массив:
+                    <div class='codeJs'>const array = [ 5, 2, 3 ];<br>
+                    const spreadedArray = [ ...array, 4, 5 ];<br>
+                    spreadedArray[0] = 1;<br><br>
+                    console.log(spreadedArray); // [ 1, 2, 3, 4, 5 ]</div><hr>
+                    16. <b>.splice(a, b, element1, element2, ... elementN);</b> – удаляет элементы массива и добавляет новые, где а – индекс начала удаления,
+                    b – количество удаляемых элементов, element1, element2, ... elementN – добавляемые элементы:
+                    <div class='codeJs'>const arr = [ 'Я', 'изучаю', 'JavaScript' ];<br>
+                    arr.splice(1, 1, 'уже изучил');<br><br>
+                    console.log(arr); // [ 'Я', 'уже изучил', 'JavaScript' ]</div><hr>
+                    17. <b>.push(element1, element2, ... elementN);</b> – добавляет элементы в конец массива:
+                    <div class='codeJs'>const array = [ 1, 2, 3 ];<br>
+                    array.push(4, 5, 6);<br><br>
+                    console.log(array); // [ 1, 2, 3, 4, 5, 6 ]</div><hr>
+                    18. <b>.pop();</b> – удаляет 1-ый элемент с конца массива:
+                    <div class='codeJs'>const array = [ 1, 2, 3, 4];<br>
+                    array.pop();<br><br>
+                    console.log(array); // [ 1, 2, 3 ];</div><hr>
+                    19. <b>.shift();</b> – удаляет 1-ый элемент из начала массива:
+                    <div class='codeJs'>const array = [ 1, 2, 3, 4 ];<br>
+                    array.shift();<br><br>
+                    console.log(array); // [ 2, 3, 4 ];</div><hr>
+                    20. <b>.unshift(element1, element2, ... elementN);</b> – добавляет элементы в начало массива:
+                    <div class='codeJs'>const array = [ 4, 5, 6 ];<br>
+                    array.unshift(1, 2, 3);<br><br>
+                    console.log(array); // [ 1, 2, 3, 4, 5, 6 ]</div><hr>
+                    21. <b>.split('s');</b> – превращает строку в массив, разбив её по разделителю s: 
+                    <div class='codeJs'>let names = 'Маша, Петя, Марина, Василий';<br>
+                    const array = names.split(', ');<br><br>
+                    console.log(array);  // [ 'Маша', 'Петя', 'Марина', 'Василий' ]</div><hr>
+                    22. <b>.join('s');</b> – превращает массив в строку, используя s как разделитель:
+                    <div class='codeJs'>const array = [ 'Маша', 'Петя', 'Марина', 'Василий' ];<br>
+                    let string = array.join(', ');<br><br>
+                    console.log(string); // 'Маша, Петя, Марина, Василий'</div><hr>
+                    23. <b>.reverse();</b> – меняет порядок элементов в массиве на обратный:
+                    <div class='codeJs'>const array = [1, 2, 3];<br>
+                    const str = 'my text';<br>
+                    const newArray = array.reverse();<br>
+                    const newStr = str.split('').reverse().join('');<br><br>
+                    console.log(newArray); // [ 3, 2, 1 ]<br>
+                    console.log(newStr); // 'txet ym'</div><hr>
+                    24. <b>for</b> (const element <b>of</b> array) { … } – перебирает все элементы массива, выполняя код с соответствующим элементом массива на каждом шаге
+                    итерации цикла, где element – перебираемый элемент массива, а array – массив с перебираемыми элементами:
+                    <div class='codeJs'>const array = [ 1, 2, 3 ];<br>
+                    const newArray = new Array();<br><br>
+                    for (const value of array) {<br>
+                    <pre>    newArray.push(value ** value);</pre>
+                    }<br><br>
+                    console.log(newArray); // [ 1, 4, 27 ]</div><hr>
+                    25. <b>new Array();</b> – создаёт новый массив:
+                    <div class='codeJs'>const array1 = new Array(5); <br>
+                    const array2 = new Array('5');<br>
+                    const array3 = new Array(5, 6);<br><br>
+                    console.log(array1); // [ <5 empty items> ] – создан массив с 5-ю пустыми элементами;<br>
+                    console.log(array2); // [ '5' ]<br>
+                    console.log(array3); // [ 5, 6 ]</div><hr>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>ОБЪЕКТ<br>(typeof === 'object')</td>
+                <td>
+                    1. <b>Object.keys(obj);</b> – показывает все ключи (свойства) объекта obj в виде массива:
+                    <div class='codeJs'>const obj = { name: 'ball', color: 'red' };<br>
+                    console.log( Object.keys(obj) ); // [ 'name', 'color' ]<br><br>
+                    delete obj.color;<br>
+                    console.log( Object.keys(obj) ); // [ 'name' ]</div><hr>  
+                    2. <b>Object.values(obj);</b> – показывает все значения объекта obj в виде массива:
+                    <div class='codeJs'>const obj = { name: 'ball', color: 'red' };<br>
+                    console.log( Object.values(obj) ); // [ 'ball', 'red' ]<br><br>
+                    obj.name = 'table';<br>
+                    obj['color'] = 'orange';<br><br>
+                    console.log( Object.values(obj) ); // [ 'table', 'orange' ]<br>
+                    console.log( Object.keys(obj).map( e => obj[e] ) ); // [ 'table', 'orange' ] - старый способ</div><hr>
+                    3. <b>Object.entries(obj);</b> – показывает все ключи (свойства) объекта obj и их значения в виде массива:
+                    <div class='codeJs'>const obj = { name: 'ball', color: 'red' };<br><br>
+                    console.log( Object.entries(obj) ); // [ [ 'name', 'ball' ], [ 'color', 'red' ] ]</div><hr> 
+                    4. <b>for</b> (const key <b>in</b> object) { … } – перебирает все свойства объекта (такие объекты называются итерируемыми), выполняя код с соответствующим
+                    свойством на каждом шаге итерации цикла, где key – свойство со значением объекта, а object – объект с перебираемыми элементами:
+                    <div class='codeJs'>function getForIn() {<br>
+                    <pre>    const object = { a: 1, b: 2, c: 3, d: 4 };</pre>
+                    <pre>    const newObject = new Object;</pre> 
+                    <pre>    for (const key in object) {</pre>
+                    <pre>            newObject[key] = object[key];</pre>
+                    <pre>    }</pre>
+                    <pre>    return newObject;</pre>
+                    }<br><br>
+                    console.log( getForIn() ); // {a: 1, b: 2, c: 3, d: 4 };</div><hr>
+                    5. <b>'key' in object</b> – проверяет есть ли свойство key в объекте object:
+                    <div class='codeJs'>const obj = { a: 1, b: 2 };<br><br>
+                    console.log('a' in obj); // true<br>
+                    console.log('c' in obj); // false</div><hr>
+                    6. <b>.hasOwnProperty('key');</b> – проверяет есть ли свойство key в объекте:
+                    <div class='codeJs'>const obj = { name: 'ball', color: 'red' };<br><br>
+                    console.log( obj.hasOwnProperty('name') ); // true<br>
+                    console.log( obj.hasOwnProperty('surname') ); // false</div><hr>
+                    7. <b>Object.defineProperty(object, 'key', { … } );</b> – добавляет в объект (object) свойство (key), его значение (value) и даёт возможность настроить это
+                    свойство с помощью трёх специальных параметров, которые иначе называются «флаги» (writable, enumerable, configurable):
+                    <div class='codeJs'>const obj = { name: 'ball', color: 'red' };<br><br>
+                    Object.defineProperty(obj, 'age', {<br>
+                    <pre>      value: '2',</pre>  
+                    <pre>      writable: true,</pre>
+                    <pre>      enumerable: true,</pre>
+                    <pre>      configurable: true</pre>
+                    })<br><br>
+                    console.log(obj); // { name: 'ball', color: 'red', age: '2' }</div><hr>
+                    8. <b>Object.defineProperties(object, { descriptors } );</b> – добавляет в объект (object) несколько свойств, их значения и даёт возможность настроить эти
+                    свойства с помощью трёх специальных параметров, которые иначе называются «флаги» (writable, enumerable, configurable):
+                    <div class='codeJs'>const person = new Object;<br>
+                    console.log(person); // {}<br><br>
+                    Object.defineProperties(person, {<br>
+                    <pre>      'name': { value: "John", writable: true, enumerable: true, configurable: true },</pre>
+                    <pre>      'surname': { value: "Smith", writable: true, enumerable: true, configurable: true  },</pre>
+                    <pre>      'age': { value: 21, writable: true, enumerable: true, configurable: true }</pre>
+                    });<br><br>
+                    console.log(person); // { name: 'John', surname: 'Smith', age: 21 }</div><hr>
+                    9. <b>Object.getOwnPropertyDescriptor(obj, 'key');</b> – показывает значение свойства key и другие настройки этого свойства:
+                    <div class='codeJs'>const obj = { name: 'ball', color: 'red' };<br>
+                    console.log( Object.getOwnPropertyDescriptor(obj, 'name') );<br>
+                    // { value: 'ball', writable: true, enumerable: true, configurable: true }<br><br>
+                    const clone = Object.defineProperties( {}, Object.getOwnPropertyDescriptors(obj) );<br>
+                    // данный способ позволяет клонировать объект со всеми его флагами, включая свойства-символы<br><br>
+                    console.log(clone); // { name: 'ball', color: 'red' }<br>
+                    console.log( Object.getOwnPropertyDescriptor(clone, 'name') );<br>
+                    // { value: 'ball', writable: true, enumerable: true, configurable: true }</div><hr>
+                    10. <b>Object.getOwnPropertySymbols(obj);</b> – показывает все свойства объекта obj с ключами-символами:
+                    <div class='codeJs'>const obj = {};<br>
+                    const a = Symbol('a');<br>
+                    const b = Symbol.for('b'); // ищет ранее созданный символ по заданному ключу и, если он найден, возвращает<br>
+                    его, иначе создаётся новый символ для данного ключа в глобальном реестре символов<br><br>
+                    obj[a] = 'localSymbol';<br>
+                    obj[b] = 'globalSymbol';<br><br>
+                    const objectSymbols = Object.getOwnPropertySymbols(obj);<br><br>
+                    console.log(objectSymbols); // [ Symbol(a), Symbol(b) ]</div><hr>
+                    11. <b>Reflect.ownKeys(obj);</b> – возвращает все свойства объекта obj, включая символьные:
+                    <div class='codeJs'>let sym = Symbol.for('comet');<br>
+                    let sym2 = Symbol.for('meteor');<br>
+                    const obj = { [sym]: 0, 'str': 0, '773': 0, '0': 0, [sym2]: 0, '-1': 0, '8': 0, 'second str': 0 };<br><br>
+                    console.log( Reflect.ownKeys(obj) );<br>
+                    // [ '0', '8', '773', 'str', '-1', 'second str', Symbol(comet), Symbol(meteor) ] - индексы в порядке их перечисления,<br>
+                    строки в порядке их ввода, Symbols в порядке их ввода</div><hr>
+                    12. <b>Object.preventExtensions(obj);</b> – запрещает добавлять новые свойства в объект obj:
+                    <div class='codeJs'>const obj = { name: 'ball', color: 'red' };<br><br>
+                    Object.preventExtensions(obj);<br><br>
+                    Object.defineProperty(obj, 'age', { value: 22, writable: true, enumerable: true, configurable: true });<br>
+                    // TypeError</div><hr>
+                    13. <b>Object.seal(obj);</b> – запрещает добавлять/удалять свойства, устанавливает configurable: false для всех существующих свойств объекта obj:
+                    <div class='codeJs'>const obj = { name: 'ball', color: 'red' };<br>
+                    console.log( Object.getOwnPropertyDescriptor(obj, 'name') );<br>
+                    // { value: 'ball', writable: true, enumerable: true, configurable: true }<br><br>
+                    Object.seal(obj);<br><br>
+                    console.log( Object.getOwnPropertyDescriptor(obj, 'name') );<br>
+                    // { value: 'ball', writable: true, enumerable: true, configurable: false }</div><hr>
+                    14. <b>Object.freeze(obj);</b> – запрещает добавлять/удалять/изменять свойства, устанавливает configurable: false, writable: false для всех
+                    существующих свойств объекта obj:
+                    <div class='codeJs'>const obj = { name: 'ball', color: 'red' };<br>
+                    console.log( Object.getOwnPropertyDescriptor(obj, 'name') );<br>
+                    // { value: 'ball', writable: true, enumerable: true, configurable: true }<br><br>
+                    Object.freeze(obj);<br><br>
+                    console.log( Object.getOwnPropertyDescriptor(obj, 'name') );<br>
+                    // { value: 'ball', writable: false, enumerable: true, configurable: false }</div><hr>
+                    15. <b>Object.isExtensible(obj);</b> – возвращает false, если добавление свойств запрещено, иначе true:
+                    <div class='codeJs'>const obj = { name: 'ball', color: 'red' };<br>
+                    console.log( Object.isExtensible(obj) ); // true<br><br>
+                    Object.preventExtensions(obj);<br>
+                    console.log( Object.isExtensible(obj) ); // false</div><hr>
+                    16. <b>Object.isSealed(obj);</b> – возвращает true, если добавление/удаление свойств запрещено и для всех существующих свойств установлено
+                    configurable: false:
+                    <div class='codeJs'>const obj = { name: 'ball', color: 'red' };<br>
+                    console.log( Object.isSealed(obj) ); // false<br><br>
+                    Object.seal(obj);<br>
+                    console.log( Object.isSealed(obj) ); // true</div><hr>
+                    17. <b>Object.isFrozen(obj);</b> – возвращает true, если добавление/удаление/изменение свойств запрещено, и для всех текущих свойств установлено
+                    configurable: false, writable: false:
+                    <div class='codeJs'>const obj = { name: 'ball', color: 'red' };<br>
+                    console.log( Object.isFrozen(obj) ); // false<br><br>
+                    Object.freeze(obj);<br>
+                    console.log( Object.isFrozen(obj) ); // true</div><hr>
+                    18. <b>Object.assign( type, obj1, obj2, …);</b> – позволяет объединять несколько источников в одной цели для создания одного нового объекта,
+                    либо для создания дубликата объекта (при этом значения одинаковых свойств будут перезаписываться на значения следующих объектов):
+                    <div class='codeJs'>const person = { name: 'Jack', age: 18, sex: 'male' }<br>
+                    const student = { name: 'Bob', age: 20, xp: '2' };<br><br>
+                    const newStudent = Object.assign({}, person, student);<br><br>
+                    console.log(newStudent); // { name: 'Bob', age: 20, sex: 'male', xp: '2' }</div><hr>
+                    19. <b>new Object();</b> – создаёт новый объект:
+                    <div class='codeJs'>function myNewObject(a, b, c) {<br>
+                    <pre>      this.a = a; this.b = b; this.c = c;</pre>
+                    };<br><br>
+                    const myObject = new myNewObject(1, 'cat', true);<br><br>
+                    console.log(myObject); // myNewObject { a: 1, b: 'cat', c: true }</div><hr>
+                    20. <b>getters & setters</b> – свойства-аксессоры, которые позволяют считывать и перезаписывать значения свойств объекта:
+                    <div class='codeJs'>const user = { name: "John", surname: "Smith" };<br><br>
+                    Object.defineProperty(user, 'fullName', {<br>
+                    <pre>    get() {</pre> 
+                    <pre>          return `${this.name} ${this.surname}`;</pre> 
+                    <pre>    },</pre> 
+                    <pre>    set(value) {</pre> 
+                    <pre>          [this.name, this.surname] = value.split(' ');</pre> 
+                    <pre>    },</pre> 
+                    <pre>    enumerable: true,</pre> 
+                    <pre>    configurable: true</pre> 
+                    });<br><br>
+                    console.log(user.name); // John<br>
+                    console.log(user.surname); // Smith<br>
+                    console.log(user.fullName); // John Smith - сработал геттер (прочиталось значение свойства)<br><br>
+                    user.fullName = 'Alice Cooper'; // сработал сеттер (изменилось значение свойства)<br><br>
+                    console.log(user.fullName); // Alice Cooper - сработал геттер (прочиталось значение свойства)<br>
+                    console.log(user.name); // Alice<br>
+                    console.log(user.surname); // Cooper</div><hr>
+                    21. <b>Object Date()</b> – объект, позволяющий работать с датой и временем:
+                    <div class='codeJs'>const dateNow = Date.now();<br>
+                    // возвращает количество миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC<br><br>
+                    const currentDate = new Date(); // создаёт объект с текущей датой<br>
+                    const date = new Date(2011, 02, 28, 22, 45, 37, 987); // создаёт объект с указанными параметрами даты<br><br>
+                    console.log(date); // 2011-03-28T18:45:37.987Z<br>
+                    console.log(date.getTime());<br>
+                    // 1301337937987 - переводит дату в формат UNIX (т.е. в формат миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC)<br><br>
+                    date.setFullYear(2221); // изменяет значение года<br>
+                    date.setMonth(11); // изменяет значение месяца<br>
+                    date.setDate(14); // изменяет значение дня месяца<br>
+                    date.setHours(05); // изменяет значение часов<br>
+                    date.setMinutes(02); // изменяет значение минут<br>
+                    date.setSeconds(18); // изменяет значение секунд<br>
+                    date.setMilliseconds(173); // изменяет значение милисекунд<br><br>
+                    console.log(date); // 2221-12-14T01:02:18.173Z - изменённая дата<br><br>
+                    console.log(date.getFullYear()); // 2221 - получаем год из даты<br>
+                    console.log(date.getMonth()); // 11 - получаем месяц из даты<br>
+                    console.log(date.getDate()); // 14 - получаем день месяца из даты<br>
+                    console.log(date.getHours()); // 5 - получаем часы из даты<br>
+                    console.log(date.getMinutes()); // 2 - получаем минуты из даты<br>
+                    console.log(date.getSeconds()); // 18 - получаем секунды из даты<br>
+                    console.log(date.getMilliseconds()); // 173 - получаем милисекунды из даты</div><hr>
+                    22. <b>new Map();</b> – создаёт новую коллекцию для хранения записей вида ключ: значение:
+                    <div class='codeJs'><u>Пример №1:</u><br><br>
+                    const map = new Map();<br><br>
+                    map.set('1', 'str1'); // сохраняет значение в ключ<br>
+                    map.set(1, 'num1'); // сохраняет значение в ключ<br>
+                    map.set(true, 'bool1'); // сохраняет значение в ключ<br><br>
+                    console.log( map.get(1)   ); // 'num1' - считывает значение<br>
+                    console.log( map.get('1') ); // 'str1' - считывает значение<br>
+                    console.log( map.get(true) ); // 'bool1' - считывает значение<br>
+                    console.log( map.size ); // 3 - хранит общее количество записей в map<br><br>                      
+                    console.log( map.has(1) ); // true - возвращает true, если ключ есть, иначе false<br>
+                    map.delete(1); // удаляет ключ из map<br>
+                    console.log( map.has(1) ); // false - возвращает true, если ключ есть, иначе false<br><br>     
+                    console.log(map); // Map(2) { '1' => 'str1', true => 'bool1' }<br>
+                    map.clear(); // удаляет все записи, т.е. очищает map<br>
+                    console.log(map); // Map(0) {}<br><br>
+                    <u>Пример №2:</u><br><br>
+                    const recipeMap = new Map([ ['огурцов', '500 гр'], ['помидоров', '350 гр'], ['сметаны', '50 гр'] ]);<br><br>
+                    console.log(recipeMap); // Map(3) { 'огурцов' => '500 гр', 'помидоров' => '350 гр', 'сметаны' => '50 гр' }<br><br>
+                    console.log(recipeMap.keys()); // [Map Iterator] { 'огурцов', 'помидоров', 'сметаны' } -<br>возвращает итерируемый объект для ключей<br><br>
+                    console.log(recipeMap.values()); // [Map Iterator] { '500 гр', '350 гр', '50 гр' } -<br>возвращает итерируемый объект для значений<br><br>
+                    console.log(recipeMap.entries());<br> // [Map Entries] { [ 'огурцов', '500 гр' ], [ 'помидоров', '350 гр' ], [ 'сметаны', '50 гр' ] } -<br>
+                    возвращает итерируемый объект для записей [ключ, значение]</div><hr>
+                    23. <b>new Set();</b> – создаёт новую коллекцию для хранения множества значений, причём каждое значение может встречаться лишь один раз:
+                    <div class='codeJs'>const set = new Set();<br><br>
+                    const vasya = { name: 'Вася' };<br>
+                    const petya = { name: 'Петя' };<br>
+                    const dasha = { name: 'Даша' };<br><br>
+                    set.add(vasya); // добавляет в коллекцию set<br>
+                    set.add(petya); // добавляет в коллекцию set<br>
+                    set.add(dasha); // добавляет в коллекцию set<br>
+                    set.add(vasya); // добавляет в коллекцию set<br>
+                    set.add(petya); // добавляет в коллекцию set<br>
+                    // при этом многократные добавления одного и того же объекта в set не создают лишних копий<br><br>
+                    console.log( set.size ); // 3 - set сохраняет только уникальные значения<br><br>
+                    console.log( set.has(vasya) ); // true - возвращает true, если значение есть, иначе false<br>
+                    set.delete(vasya); // удаляет значение из коллекции set<br>
+                    console.log( set.has(vasya) ); // false - возвращает true, если значение есть, иначе false<br><br>
+                    console.log(set); // Set(2) { { name: 'Петя' }, { name: 'Даша' } }<br>
+                    set.clear(); // удаляет все записи, т.е. очищает map<br>
+                    console.log(set); // Set(0) {}</div><hr>
+                    24. <b>new WeakMap();</b> – создаёт Map-подобную коллекцию, позволяющую использовать в качестве ключей только объекты, и автоматически
+                    удаляющую их вместе с соответствующими значениями, как только они становятся недостижимыми иными путями:
+                    <div class='codeJs'>const weakMap = new WeakMap();<br>
+                    const newEmployees = { person1: 'John', perosn2: 'Alex' };<br><br>     
+                    weakMap.set(newEmployees, 'persons'); // сохраняет значение ключа (работает только с объектами)<br>
+                    console.log(weakMap); // WeakMap { <items unknown> }<br>
+                    console.log(weakMap.get(newEmployees)); // 'persons' - читает значение ключа<br><br>                        
+                    console.log(weakMap.has(newEmployees)); // true - возвращает true, если ключ есть, иначе false<br>
+                    weakMap.delete(newEmployees); // удаляет запись с ключом key<br>
+                    console.log(weakMap.has(newEmployees)); // false - возвращает true, если ключ есть, иначе false<br><br>
+                    newEmployees = null; // перезаписываем ссылку на объект (объект newEmployees удалён из памяти)</div><hr>
+                    25. <b>new WeakSet();</b> - создаёт Set-подобную коллекцию, которая хранит только объекты и удаляет их, как только
+                    они становятся недостижимыми иными путями:
+                    <div class='codeJs'>const visitedSet = new WeakSet();<br><br>
+                    const john = { name: "John" };<br>
+                    const pete = { name: "Pete" };<br>
+                    const mary = { name: "Mary" };<br><br>                    
+                    visitedSet.add(john); // добавляет в коллекцию weakset<br>
+                    visitedSet.add(pete); // добавляет в коллекцию weakset<br>
+                    visitedSet.add(john); // добавляет в коллекцию weakset<br>
+                    // при этом многократные добавления одного и того же объекта в set не создают лишних копий<br><br>
+                    console.log(visitedSet); // WeakSet { <items unknown> }<br><br>                    
+                    console.log(visitedSet.has(john)); // true - возвращает true, если значение есть, иначе false<br>
+                    visitedSet.delete(john); // удаляет значение из коллекции weakset<br>
+                    console.log(visitedSet.has(john)); // false - возвращает true, если значение есть, иначе false<br><br>                  
+                    john = null; // структура данных visitedSet будет очищена автоматически</div><hr>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>ФУНКЦИЯ<br>(typeof === 'function')</td>
+                <td>
+                    1. <b>arguments.length;</b> – возвращает количество передаваемых параметров в функцию:
+                    <div class='codeJs'>function getLength(...args) {<br>
+                    <pre>    return { length: arguments.length, args: [...args] };</pre>
+                    }<br><br>
+                    function getArray(...args) {<br>
+                    <pre>    const newArr = new Array();</pre>
+                    <pre>    for (const element of args) {</pre>
+                    <pre>          newArr.push(element);</pre>
+                    <pre>    }</pre>
+                    <pre>    return newArr;</pre>
+                    }<br><br>
+                    console.log( getLength({ a: 1, b: 2 }) ); // { length: 1, args: [ { a: 1, b: 2 } ] }<br>
+                    console.log( getLength(2, true, 'text') ); // { length: 3, args: [ 2, true, 'text' ] }<br>
+                    console.log( getLength( getArray(-10, 0, 5, 20) ) ); // { length: 1, args: [ [ -10, 0, 5, 20 ] ] }</div><hr>
+                    2. <b>new Function('args', 'function body');</b> – способ быстрого создания функции из строки, где: 'args' – параметры
+                    функции через запятую в виде строки, 'function body' – код функции в виде строки:
+                    <div class='codeJs'>let sum = new Function( 'a, b', 'return a + b;' );<br><br>
+                    console.log( sum(1, 2) ); // 3</div><hr>
+                    3. <b>.call(thisArg, arg1, arg2, …argN);</b> – вызывает функцию с указанным значением this (thisArg) и индивидуально
+                    предоставляет аргументы (arg1, arg2, …argN):
+                    <div class='codeJs'>const mike = { age: 24, getAge: function() { return this.age } };<br>
+                    const anna = { age: 21 };<br><br>
+                    console.log( mike.getAge() ); // 24<br>
+                    console.log( mike.getAge.call(anna) ); // 21</div><hr>
+                    4. <b>.apply(thisArg, [arg1, arg2, …argN]);</b> – вызывает функцию с указанным значением this (thisArg) и аргументами,
+                    предоставленными в виде массива ([arg1, arg2, …argN]):
+                    <div class='codeJs'>const arr = [ 4, 7, 2, 9 ];<br><br>
+                    console.log( Math.min(4, 7, 2, 9) ); // 2<br>
+                    console.log( Math.min(arr) ); // NaN<br>
+                    console.log( Math.min.apply(Math, arr) ); // 2</div><hr>
+                    5. <b>.bind(thisArg, arg1, arg2, …argN);</b> – создаёт новую функцию, которая при вызове устанавливает в качестве
+                    контекста выполнения this предоставленное значение (thisArg) и индивидуально предоставляет аргументы (arg1, arg2, …argN):
+                    <div class='codeJs'>console.log( Math.pow(2, 3) ); // 8;<br>
+                    console.log( Math.pow(2, 10) ); // 1024<br><br>
+                    let binPow = Math.pow.bind(null, 2);<br><br>
+                    console.log( binPow(3) ); // 8;<br>
+                    console.log( binPow(10) ); // 1024</div><hr>
+                </td>
+            </tr>
+        </table>
+        <footer id='footer-page'>
+            <div id='footer-content'>
+                <a href='html-elements.html'>Элементы HTML</a>
+                <a href='css-elements.html'>Элементы CSS</a>
+                <a href='css-flexbox.html'>CSS Flexbox</a>
+                <a href='css-grid.html'>CSS Grid Layout</a>
+                <a id='used-link' href='js-methods.html'>Методы JS</a>
+                <a href='index.html'>РЕЗЮМЕ</a>
+                <p>
+                    <i>kpdan.95@gmail.com | +7 987 902-05-46</i><br>
+                    <b>Методы JS | 2021 © Konstantin Dan</b>
+                </p>
+            </div>   
+        </footer>
+        <div id='arrowTop' hidden></div>
+        <script src='./scripts/js-methods.js' type='text/javascript'></script>
+    </body>
+</html>
