@@ -1,0 +1,68 @@
+@media (max-width: 1024px) {
+  .container {
+    margin: 10px;
+    grid-template-columns: 1fr;
+  }
+  .courseImg {
+    align-self: center;
+    width: 70%;
+    margin-bottom: 30px;
+  }
+  .courseImg div {
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+  }
+  .markers {
+    align-self: center;
+    width: 90%;
+  }
+  .markers div {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .courseImg {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .markers {
+    width: 100%;
+  }
+  .markers div {
+    margin-right: 15px;
+  }
+  .about .box {
+    flex-direction: column;
+  }
+  .about .box .year {
+    margin-bottom: 5px;
+  }
+  .about .box .text {
+    padding-left: 0;
+  }
+  .about .box .year a br {
+    display: none;
+  }
+  .about .box .text a img {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .courseImg div {
+    top: 10px;
+    right: 10px;
+  }
+  .markers div {
+    margin-right: 7px;
+  }
+}
+
+@media (max-width: 340px) {
+  .personalInfo ul li {
+    font-size: 0.86em;
+  }
+}
