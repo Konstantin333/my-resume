@@ -1,3 +1,4 @@
+const photo = document.querySelector(".profileText .photo img");
 const course = document.querySelector(".courseImg img");
 const markers = document.querySelector(".markers");
 
@@ -28,4 +29,15 @@ function switchCourse() {
   }
 }
 
+function stopCopy(element) {
+  element.ondragstart = noselect;
+  element.onselectstart = noselect;
+  element.oncontextmenu = noselect;
+
+  function noselect() {
+    return false;
+  }
+}
+
 switchCourse();
+stopCopy(photo);
