@@ -1,0 +1,303 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: #c8c4bb;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  min-height: 1000px;
+  margin: 50px;
+  box-shadow: 5px 5px 5px #808080;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.container .leftSide {
+  position: relative;
+  padding: 40px 30px 40px 30px;
+  background: #000;
+}
+
+.profileText {
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ffffff33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileText .photo {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 0 #87a6fa;
+}
+
+.profileText .photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileText h2 {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.4em;
+  letter-spacing: 1px;
+}
+
+.profileText h2 hr {
+  border: none;
+}
+
+.profileText h2 span {
+  font-size: 0.85em;
+}
+
+.personalInfo {
+  padding-top: 20px;
+}
+
+.personalInfo .title {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.personalInfo ul {
+  position: relative;
+  padding-left: 0;
+  line-height: 2em;
+}
+
+.personalInfo ul li {
+  position: relative;
+  margin: 12px 0;
+  font-size: 0.9em;
+  list-style: none;
+}
+
+.personalInfo ul li .icon {
+  display: inline-block;
+  width: 30px;
+  color: #87a6fa;
+  font-size: 18px;
+}
+
+.personalInfo ul li span {
+  color: #fff;
+  font-weight: 300;
+}
+
+.personalInfo ul li span a {
+  color: #fff;
+}
+
+.skills ul,
+.interests ul {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.courses {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.courseImg {
+  position: relative;
+  overflow: hidden;
+  align-self: center;
+  width: 95%;
+  border: 4px solid #87a6fa;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  display: flex;
+}
+
+.courseImg img {
+  width: 100%;
+}
+
+.courseImg div {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #000;
+  font-size: 22px;
+}
+
+.markers {
+  display: flex;
+}
+
+.markers div {
+  border: 2px solid #87a6fa;
+  margin-right: 7px;
+  opacity: 0.2;
+  cursor: pointer;
+  display: flex;
+}
+
+.markers div:first-child {
+  opacity: 1;
+}
+
+.markers div:last-child {
+  margin-right: 0;
+}
+
+.markers div img {
+  width: 100%;
+}
+
+.container .rightSide {
+  position: relative;
+  padding: 30px 40px 30px 40px;
+  background: #fff;
+}
+
+.about {
+  margin-bottom: 50px;
+}
+
+.about:last-child {
+  margin-bottom: 0;
+}
+
+.about .title2 {
+  margin: 10px 0 20px 0;
+  color: #87a6fa;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.about p {
+  color: #333;
+}
+
+.about .box {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.about .box .year {
+  min-width: 150px;
+}
+
+.about .box .year h5 {
+  color: #4c5052;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.about .box .year a {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+.about .box .year a:link {
+  color: #4967bb;
+}
+
+.about .box .year a:visited {
+  color: #333;
+}
+
+.about .box .year a:hover {
+  color: #000;
+}
+
+.about .box .projects h5 {
+  margin-top: 16px;
+}
+
+.about .box .text h4 {
+  color: #4c5052;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.about .box .text {
+  padding-left: 50px;
+}
+
+.about .box .text ul {
+  padding-left: 0;
+}
+
+.about .box .text ul li {
+  margin-bottom: 10px;
+  color: #333;
+  list-style-type: none;
+}
+
+.about .box .text ul li:last-child {
+  margin-bottom: 0;
+}
+
+.about .box .text a img {
+  width: 80%;
+  border: 3px double #333;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0px 1px 5px 1px #666;
+}
+
+.about .box .text a img:hover {
+  border: 3px double #4967bb;
+  box-shadow: 0px 1px 5px 1px #4967bb;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 7px;
+  box-shadow: inset 0 0 6px #00000080;
+  background: #323232;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid #323232;
+  border-radius: 7px;
+  box-shadow: inset 0 0 6px #00000080;
+  background: #fff;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #323232;
+}
