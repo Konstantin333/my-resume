@@ -1,22 +1,26 @@
 @media (max-width: 1024px) {
   .container {
-    margin: 10px;
+    margin: 0px;
     grid-template-columns: 1fr;
   }
+
   .courseImg {
     align-self: center;
     width: 70%;
     margin-bottom: 30px;
   }
+
   .courseImg div {
     top: 20px;
     right: 20px;
     font-size: 25px;
   }
+
   .markers {
     align-self: center;
     width: 90%;
   }
+
   .markers div {
     margin-right: 20px;
   }
@@ -27,24 +31,36 @@
     width: 100%;
     margin-bottom: 20px;
   }
+
   .markers {
     width: 100%;
   }
+
   .markers div {
     margin-right: 15px;
   }
+
+  .about .title2 {
+    text-align: center;
+    line-height: 1.5;
+  }
+
   .about .box {
     flex-direction: column;
   }
+
   .about .box .year {
     margin-bottom: 5px;
   }
+
   .about .box .text {
     padding-left: 0;
   }
+
   .about .box .year a br {
     display: none;
   }
+
   .about .box .text a img {
     width: 100%;
     margin: 0;
@@ -56,6 +72,7 @@
     top: 10px;
     right: 10px;
   }
+
   .markers div {
     margin-right: 7px;
   }
