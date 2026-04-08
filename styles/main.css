@@ -156,6 +156,7 @@ body {
 }
 
 .markers div {
+  width: 30%;
   border: 2px solid #87a6fa;
   margin-right: 7px;
   opacity: 0.2;
@@ -164,12 +165,10 @@ body {
 }
 
 .markers div:first-child {
-  width: 30%;
   opacity: 1;
 }
 
 .markers div:last-child {
-  width: 30%;
   margin-right: 0;
 }
 
