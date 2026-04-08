@@ -2,19 +2,17 @@ const course = document.querySelector(".courseImg img");
 const markers = document.querySelector(".markers");
 
 const allCourses = [
-  "./images/courses/sololearn-js.jpg",
-  "./images/courses/sololearn-css.jpg",
-  "./images/courses/sololearn-html.jpg",
-  "./images/courses/coursera-js.jpg",
+  "./images/courses/basics-of-programming.jpg",
+  "./images/courses/start-in-1c.jpg"
 ];
-const allMarkers = [1, 3, 5, 7];
+const allMarkers = [1, 3];
 
 course.parentNode.addEventListener("click", () =>
   window.open(course.getAttribute("src"))
 );
 
 function switchCourse() {
-  const arrInd = [0, 1, 2, 3];
+  const arrInd = [0, 1];
 
   for (let i = 0; i < allMarkers.length; i++) {
     markers.childNodes[allMarkers[i]].onclick = function () {
